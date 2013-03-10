@@ -6,7 +6,10 @@
 from random import shuffle, randrange
 # Local imports.
 import words as frenchWords
+import verbs as frenchVerbs
+import buildVerb
 import numbers as frenchNumbers
+import buildNumber
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Simpler input.
 def input( output ):
@@ -60,7 +63,7 @@ def quizNumber( number, trys = 3 ):
 def quizWord( number, trys = 3 ):
     def cleanWord( theWord ):
         return theWord.replace( '-', ' ' ).strip()
-    word = getWord( number )
+    word = buildNumber.getWord( number )
     print "What is the word for '%d'" % ( number, )
     answer = False
     totalAttempts = 0
@@ -82,7 +85,7 @@ def quizWord( number, trys = 3 ):
 def quizLowNumbers( quizFunction, trys = 3 ):
     quizRange( quizFunction, range( 20 ), trys )
 def quizTensNumbers( quizFunction, trys = 3 ):
-    quizRange( quizFunction,range( 20 ), trys )
+    quizRange( quizFunction, range( 20 ), trys )
 def quizRandom( quizFunction, maxNumber, total, trys = 3 ):
     nums = range( maxNumber + 1 )
     shuffle( nums )
@@ -95,4 +98,5 @@ def frenchNumbersTestRun():
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print getRegularVerb( "she", "hate", "you" )
+    print buildVerb.getVerbAndRole( "she", "hate" )
+    quizLowNumbers( quizWord )
