@@ -40,19 +40,21 @@ def tryLoopForItem( quizFunction ):
     def decorator( *args, **kwargs ):
         trys = kwargs.get( "trys", 1 )
         totalAttempts = 0
-        answer = False
-        while trys > 0 and answer is False:
+        answered = False
+        while trys > 0 and answered is not True:
             totalAttempts += 1
-            result, input = quizFunction( *args, **kwargs )
+            result, answer = quizFunction( *args, **kwargs )
             if result:
-                answer = True
+                answered = True
                 print "Well done!"
             else:
                 trys -= 1
                 print "Incorrect."
                 if trys > 0:
                     print "Please try again."
-        return answer, totalAttempts
+                else:
+                    print "The correct answer is: %s" % ( answer, )
+        return answered, totalAttempts
     return decorator
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a number.
@@ -66,7 +68,7 @@ def quizNumber( number, trys = 3 ):
         answerNumber = int( answerWord )
     except:
         answerNumber = False
-    return answerNumber == number, answerNumber
+    return answerNumber == number, word
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a word.
 @tryLoopForItem
@@ -76,7 +78,7 @@ def quizWord( number, trys = 3 ):
     word = buildNumber.getWord( number )
     print "What is the word for '%d'" % ( number, )
     answerWord = cleanWord( input( "Answer> " ) )
-    return answerWord == cleanWord( word ), answerWord
+    return answerWord == cleanWord( word ), word
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A bunch of number quiz functions
 def quizLowNumbers( quizFunction, trys = 3 ):
