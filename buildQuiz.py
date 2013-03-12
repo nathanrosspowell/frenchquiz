@@ -5,6 +5,7 @@
 # Imports.
 from random import shuffle, randrange, choice
 from functools import partial
+from functools import wraps
 # Local imports.
 import words as frenchWords
 import verbs as frenchVerbs
@@ -42,7 +43,9 @@ def makeFunctionItems( quizFunction, items, shuffleThem = True ):
     return [ partial( quizFunction, x ) for x in items ]
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a number.
+
 def tryLoopForItem( quizFunction ):
+    @wraps( quizFunction )
     def decorator( *args, **kwargs ):
         trys = kwargs.get( "trys", 1 )
         totalAttempts = 0
@@ -88,8 +91,8 @@ def numberByWord( number, trys = 3 ):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Write verb and role
 @tryLoopForItem
-def verbRoleFrench( verb, trys = 3 ):
-    role = choice( frenchVerbs.verbRoles )
+def verbRoleFrench( params, trys = 3 ):
+    verb, role = params
     french, english = buildVerb.getVerbAndRole( role, verb )
     print "What is the french for '%s'?" % ( english, )
     answerWord = input( "Answer> " )
@@ -97,8 +100,8 @@ def verbRoleFrench( verb, trys = 3 ):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Write verb and role
 @tryLoopForItem
-def verbRoleEnglish( verb, trys = 3 ):
-    role = choice( frenchVerbs.verbRoles )
+def verbRoleEnglish( params, trys = 3 ):
+    verb, role = params
     french, english = buildVerb.getVerbAndRole( role, verb )
     print "What is the english for '%s'?" % ( french, )
     answerWord = input( "Answer> " )
@@ -112,7 +115,11 @@ def verbAndRole( quizFunction, verbGroup, take, trys = 3 ):
     while len( keysList ) < take:
         keysList += keys
     shuffle( keysList )
-    randomKeys = [ x for i, x in enumerate( keysList ) if i < take ]
+    r = lambda: choice( frenchVerbs.verbRoles )
+    randomKeys = [ ( x, r() ) for i, x in enumerate( keysList ) if i < take ]
+    print "---------------------"
+    print randomKeys
+    print "---------------------"
     quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
