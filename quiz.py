@@ -1,101 +1,31 @@
 #!/usr/bin/python
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# words. Authored by Nathan Ross Powell.
+# quiz. Authored by Nathan Ross Powell.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Imports.
 from random import shuffle, randrange
-from functools import partial
 # Local imports.
-import words as frenchWords
-import verbs as frenchVerbs
-import buildVerb
-import numbers as frenchNumbers
-import buildNumber
+from buildQuiz import                   \
+  makeFunctionItems                     \
+, numberByNumber                        \
+, numberByWord                          \
+, quiz
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Simpler input.
-def input( output ):
-    return raw_input( output ).strip() #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Quiz a range.
-def quiz( functionItems, numberRange, trys = 3 ):
-    numberItems = len( functionItems )
-    print "%s items in test:" % ( numberItems, )
-    correct = 0
-    totalAttempts = 0
-    for i, functionItem in enumerate( functionItems ):
-        print "--------------\n%s) " % ( i + 1, ),
-        answer, attempts = functionItem( trys = trys )
-        totalAttempts += attempts
-        if answer:
-            correct += 1
-    print "Score: %d/%d, total attempts: %d" % ( correct, numberItems, totalAttempts, )
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Quiz a range.
-def makeFunctionItems( quizFunction, items, shuffleThem = True ):
-    if shuffleThem:
-        shuffle( items )
-    return [ partial( quizFunction, x ) for x in items ]
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Quiz a number.
-def tryLoopForItem( quizFunction ):
-    def decorator( *args, **kwargs ):
-        trys = kwargs.get( "trys", 1 )
-        totalAttempts = 0
-        answered = False
-        while trys > 0 and answered is not True:
-            totalAttempts += 1
-            result, answer = quizFunction( *args, **kwargs )
-            if result:
-                answered = True
-                print "Well done!"
-            else:
-                trys -= 1
-                print "Incorrect."
-                if trys > 0:
-                    print "Please try again."
-                else:
-                    print "The correct answer is: %s" % ( answer, )
-        return answered, totalAttempts
-    return decorator
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Quiz a number.
-@tryLoopForItem
-def quizNumber( number, trys = 3 ):
-    word = buildNumber.getWord( number )
-    print "What number is '%s'" % ( word, )
-    answerWord = input( "Answer> " )
-    answerNumber = int( answerWord )
-    try: 
-        answerNumber = int( answerWord )
-    except:
-        answerNumber = False
-    return answerNumber == number, word
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Quiz a word.
-@tryLoopForItem
-def quizWord( number, trys = 3 ):
-    def cleanWord( theWord ):
-        return theWord.replace( '-', ' ' ).strip()
-    word = buildNumber.getWord( number )
-    print "What is the word for '%d'" % ( number, )
-    answerWord = cleanWord( input( "Answer> " ) )
-    return answerWord == cleanWord( word ), word
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# A bunch of number quiz functions
-def quizLowNumbers( quizFunction, trys = 3 ):
-    quiz( makeFunctionItems( quizFunction, range( 2 ) ), trys )
-def quizTensNumbers( quizFunction, trys = 3 ):
-    quizRange( quizFunction, range( 20 ), trys )
-def quizRandom( quizFunction, maxNumber, total, trys = 3 ):
-    nums = range( maxNumber + 1 )
-    shuffle( nums )
-    nums = [ x for i, x in enumerate( nums ) if i < total ]
-    quizRange( quizFunction, nums, trys, shuffleThem = False )
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Test run.
-def frenchNumbersTestRun():
-    printNumbers( min = 890, max = 910 )
+# A bunch of number quiz'.
+def quizLowNumbers( words = True, trys = 3 ):
+    func = numberByWord if words else numberByNumber
+    quiz( makeFunctionItems( func, range( 1, 21 ) ), trys )
+def quizTensNumbers( words = True, trys = 3 ):
+    func = numberByWord if words else numberByNumber
+    quiz( makeFunctionItems( func, range( 10, 101, 10 ) ), trys )
+def quizRandom( numbersList, take, words = True, trys = 3 ):
+    func = numberByWord if words else numberByNumber
+    shuffle( numbersList )
+    numbers = [ x for i, x in enumerate( numbersList ) if i < take ]
+    quiz( makeFunctionItems( func, numbers, shuffleThem = False ), trys )
+def quizBigNumbers( words = True, trys = 3 ):
+    quizRandom( range( 101 ), 20, words = words, trys = trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print buildVerb.getVerbAndRole( "she", "hate" )
-    quizLowNumbers( quizWord )
+    quizLowNumbers()
