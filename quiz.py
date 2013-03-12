@@ -5,11 +5,15 @@
 # Imports.
 from random import shuffle, randrange
 # Local imports.
+import verbs as frenchVerbs
 from buildQuiz import                   \
   makeFunctionItems                     \
 , numberByNumber                        \
 , numberByWord                          \
-, quiz
+, quiz                                  \
+, verbAndRole                           \
+, verbRoleFrench                        \
+, verbRoleEnglish
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A bunch of number quiz'.
 def quizLowNumbers( words = True, trys = 3 ):
@@ -26,6 +30,17 @@ def quizRandom( numbersList, take, words = True, trys = 3 ):
 def quizBigNumbers( words = True, trys = 3 ):
     quizRandom( range( 101 ), 20, words = words, trys = trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# A bunch of number quiz'.
+def quizIrregularVerbs( french = True, tests = 3, trys = 3 ):
+    func = verbRoleFrench if french else verbRoleEnglish
+    verbAndRole( verbRoleFrench, frenchVerbs.verbsIrregular, tests, trys )
+def quizGroup1Verbs( french = True, tests = 3, trys = 3 ):
+    func = verbRoleFrench if french else verbRoleEnglish
+    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, tests, trys )
+def quizGroup2Verbs( french = True, tests = 3, trys = 3 ):
+    func = verbRoleFrench if french else verbRoleEnglish
+    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup2, tests, trys )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    quizLowNumbers()
+    quizIrregularVerbs()

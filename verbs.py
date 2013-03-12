@@ -5,8 +5,8 @@
 # Imports.
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Verbs, irregular ones have the variations in a dict. 
-verbs = {
+# Verbs, irregular ones have the variations in a dict.
+verbsIrregular = {
     "have" : {
         "i" : "j'ai",
         "you" : "tu as",
@@ -37,6 +37,8 @@ verbs = {
         "they(m)" : "ils vont",
         "they(f)" : "elle vont",
     },
+}
+verbsGroup1 = {
     # Group 1
     "like" : "aimer",
     "work" : "travailler",
@@ -57,6 +59,8 @@ verbs = {
     "share" : "partager",
     "jump" : "sauter",
     "carry" : "transporter",
+}
+verbsGroup2 = {
 	# Group 2
     "act" : "agir",
     "coution" : "avertir",
@@ -86,6 +90,10 @@ verbs = {
     "age" : "vielillir",
     "vomit" : "vomir",
 }
+verbs = {}
+verbs.update( verbsIrregular )
+verbs.update( verbsGroup1 )
+verbs.update( verbsGroup2 )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Regular verb roles. 
 verb1Role = {
@@ -109,25 +117,9 @@ verb2Role = {
     "they(m)" : ( "ils", "essent", ),
     "they(f)" : ( "elles", "essent", ),
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Build a irregular sentence. 
-def getIrregularVerb( role, verb, thing ):
-    return "%s %s" % ( verbs[ verb.lower() ][ role.lower() ], thing )
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Build a regular sentence.
-def getRegularVerb( role, verb, thing ):
-    verb = verbs[ verb ]
-    baseWord = verb[ : -2 ]
-    ending = verb[ -2 : ]
-    if ending == "er":
-        verbRole = verb1Role
-    elif ending == "ir":
-        verbRole = verb2Role
-    else:
-        raise Exception( "Bad verb '%s'. No case for it." % ( verb, ) )
-    start, ending = verbRole[ role ]
-    return "%s %s%s %s" % ( start, baseWord, ending, thing, )
+verbRoles = verb1Role.keys()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print getRegularVerb( "she", "hate", "you" )
+    import buildVerb
+    print buildVerb.getVerbAndRole( "she", "hate" )

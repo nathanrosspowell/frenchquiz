@@ -3,7 +3,7 @@
 # buildQuiz. Authored by Nathan Ross Powell.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Imports.
-from random import shuffle, randrange
+from random import shuffle, randrange, choice
 from functools import partial
 # Local imports.
 import words as frenchWords
@@ -17,7 +17,8 @@ div = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Simpler input.
 def input( output ):
-    return raw_input( output ).strip() #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    return raw_input( output ).strip()
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a range.
 def quiz( functionItems, trys = 3 ):
     numberItems = len( functionItems )
@@ -73,7 +74,7 @@ def numberByNumber( number, trys = 3 ):
         answerNumber = int( answerWord )
     except:
         answerNumber = False
-    return answerNumber == number, word
+    return answerNumber == number, number
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Write a digit as a french word
 @tryLoopForItem
@@ -85,6 +86,35 @@ def numberByWord( number, trys = 3 ):
     answerWord = cleanWord( input( "Answer> " ) )
     return answerWord == cleanWord( word ), word
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write verb and role
+@tryLoopForItem
+def verbRoleFrench( verb, trys = 3 ):
+    role = choice( frenchVerbs.verbRoles )
+    french, english = buildVerb.getVerbAndRole( role, verb )
+    print "What is the french for '%s'?" % ( english, )
+    answerWord = input( "Answer> " )
+    return answerWord == french, french
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write verb and role
+@tryLoopForItem
+def verbRoleEnglish( verb, trys = 3 ):
+    role = choice( frenchVerbs.verbRoles )
+    french, english = buildVerb.getVerbAndRole( role, verb )
+    print "What is the english for '%s'?" % ( french, )
+    answerWord = input( "Answer> " )
+    return answerWord == english, english
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write verb and role
+def verbAndRole( quizFunction, verbGroup, take, trys = 3 ):
+    keys = verbGroup.keys() 
+    # Append the list until we have more items that the number of test.
+    keysList = keys
+    while len( keysList ) < take:
+        keysList += keys
+    shuffle( keysList )
+    randomKeys = [ x for i, x in enumerate( keysList ) if i < take ]
+    quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    quiz( makeFunctionItems( numberByNumber, range( 11 ) ), 2 )
+    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, 4 )
