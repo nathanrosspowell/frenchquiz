@@ -12,9 +12,10 @@ import verbs as frenchVerbs
 import buildVerb
 import numbers as frenchNumbers
 import buildNumber
+import buildSentence
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Formatting.
-div = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+div = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Simpler input.
 def input( output ):
@@ -33,7 +34,9 @@ def quiz( functionItems, trys = 3 ):
         if answer:
             correct += 1
     returnVals = ( correct, numberItems, totalAttempts, )
-    print "%s\nScore: %d/%d, total attempts: %d" % ( ( div, ) + returnVals )
+    print div
+    print "Score: %d/%d, total attempts: %d" % returnVals
+    print div
     return returnVals
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a range.
@@ -43,7 +46,6 @@ def makeFunctionItems( quizFunction, items, shuffleThem = True ):
     return [ partial( quizFunction, x ) for x in items ]
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Quiz a number.
-
 def tryLoopForItem( quizFunction ):
     @wraps( quizFunction )
     def decorator( *args, **kwargs ):
@@ -116,11 +118,40 @@ def verbAndRole( quizFunction, verbGroup, take, trys = 3 ):
         keysList += keys
     r = lambda: choice( frenchVerbs.verbRoles )
     randomKeys = [ ( x, r() ) for x in sample( keysList, take ) ]
-    print "---------------------"
-    print randomKeys
-    print "---------------------"
-    quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
+    return quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write sentence
+@tryLoopForItem
+def sentenceFrench( params, trys = 3 ):
+    verb, role, item = params
+    french, english = buildSentence.getSentence( role, verb, item )
+    print "What is the french for '%s'?" % ( english, )
+    answerWord = input( "Answer> " )
+    return answerWord == french, french
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write sentence
+@tryLoopForItem
+def sentenceEnglish( params, trys = 3 ):
+    verb, role, item = params
+    french, english = buildSentence.getSentence( role, verb, item )
+    print "What is the english for '%s'?" % ( french, )
+    answerWord = input( "Answer> " )
+    return answerWord == english, english
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Write verb and role
+def sentece( quizFunction, verbGroup, wordGroup, take, trys = 3 ):
+    keys = verbGroup.keys() 
+    wordKeys = wordGroup.keys()
+    # Append the list until we have more items that the number of test.
+    keysList = keys
+    while len( keysList ) < take:
+        keysList += keys
+    r = lambda: choice( frenchVerbs.verbRoles )
+    i = lambda: choice( wordKeys )
+    randomKeys = [ ( x, r(), i() ) for x in sample( keysList, take ) ]
+    return quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, 4 )
+    #verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, 4 )
+    sentece( sentenceEnglish, frenchVerbs.verbsGroup1, frenchWords.words, 4 )

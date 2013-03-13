@@ -5,11 +5,11 @@
 # Imports.
 from verbs import *
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Build a irregular sentence. 
+# Build a irregular verb and role. 
 def getIrregularVerb( role, verb ):
     return verbs[ verb.lower() ][ role.lower() ]
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Build a regular sentence.
+# Build a regular verb and role.
 def getRegularVerb( role, verb ):
     verb = verbs[ verb ]
     baseWord = verb[ : -2 ]
@@ -23,9 +23,8 @@ def getRegularVerb( role, verb ):
     start, ending = verbRole[ role ]
     return "%s %s%s" % ( start, baseWord, ending, )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Build a sentence. 
+# Build a verb and role. 
 def getVerbAndRole( role, verb ):
-    # Add checks.
     try:
         french = getIrregularVerb( role, verb )
     except:

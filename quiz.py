@@ -5,7 +5,9 @@
 # Imports.
 from random import shuffle, randrange, sample
 # Local imports.
+import scoreQuiz
 import verbs as frenchVerbs
+from words import words as frenchWords
 from buildQuiz import                   \
   makeFunctionItems                     \
 , numberByNumber                        \
@@ -13,34 +15,68 @@ from buildQuiz import                   \
 , quiz                                  \
 , verbAndRole                           \
 , verbRoleFrench                        \
-, verbRoleEnglish
+, verbRoleEnglish                       \
+, sentece                               \
+, sentenceEnglish                       \
+, sentenceFrench
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A bunch of number quiz'.
 def quizLowNumbers( words = True, trys = 3 ):
     func = numberByWord if words else numberByNumber
-    quiz( makeFunctionItems( func, range( 1, 21 ) ), trys )
+    return quiz( makeFunctionItems( func, range( 1, 21 ) ), trys )
 def quizTensNumbers( words = True, trys = 3 ):
     func = numberByWord if words else numberByNumber
-    quiz( makeFunctionItems( func, range( 10, 101, 10 ) ), trys )
+    return quiz( makeFunctionItems( func, range( 10, 101, 10 ) ), trys )
 def quizRandom( numbersList, take, words = True, trys = 3 ):
     func = numberByWord if words else numberByNumber
     numbers = sample( numbersList, take )
-    quiz( makeFunctionItems( func, numbers, shuffleThem = False ), trys )
+    return quiz( makeFunctionItems( func, numbers, shuffleThem = False ), trys)
 def quizBigNumbers( words = True, trys = 3 ):
-    quizRandom( range( 101 ), 20, words = words, trys = trys )
+    return quizRandom( range( 101 ), 20, words = words, trys = trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A bunch of number quiz'.
+def quizVerbs( french = True, tests = 3, trys = 3 ):
+    func = verbRoleFrench if french else verbRoleEnglish
+    return verbAndRole( func, frenchVerbs.verbs, tests, trys )
 def quizIrregularVerbs( french = True, tests = 3, trys = 3 ):
     func = verbRoleFrench if french else verbRoleEnglish
-    verbAndRole( verbRoleFrench, frenchVerbs.verbsIrregular, tests, trys )
+    return verbAndRole( func, frenchVerbs.verbsIrregular, tests, trys )
 def quizGroup1Verbs( french = True, tests = 3, trys = 3 ):
     func = verbRoleFrench if french else verbRoleEnglish
-    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, tests, trys )
+    return verbAndRole( func, frenchVerbs.verbsGroup1, tests, trys )
 def quizGroup2Verbs( french = True, tests = 3, trys = 3 ):
     func = verbRoleFrench if french else verbRoleEnglish
-    verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup2, tests, trys )
+    return verbAndRole( func, frenchVerbs.verbsGroup2, tests, trys )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# A bunch of number quiz'.
+def quizSentence( french = True, tests = 3, trys = 3 ):
+    func = sentenceFrench if french else sentenceEnglish
+    return sentece( func, frenchVerbs.verbs, frenchWords, tests, trys )
+def quizIrregularSentence( french = True, tests = 3, trys = 3 ):
+    func = sentenceFrench if french else sentenceEnglish
+    return sentece( func, frenchVerbs.verbsIrregular, frenchWords, tests, trys)
+def quizGroup1Verbs( french = True, tests = 3, trys = 3 ):
+    func = sentenceFrench if french else sentenceEnglish
+    return sentece( func, frenchVerbs.verbsGroup1, frenchWords, tests, trys )
+def quizGroup2Verbs( french = True, tests = 3, trys = 3 ):
+    func = sentenceFrench if french else sentenceEnglish
+    return sentece( func, frenchVerbs.verbsGroup2, frenchWords, tests, trys )
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Big fat quiz.
+def quiz1():
+    s = scoreQuiz.Scores()
+    print "~~~~ Low numbers"
+    s.add( quizLowNumbers() )
+    print "~~~~ Tens of numbers"
+    s.add( quizTensNumbers() )
+    print "~~~~ 10 Verbs and roles"
+    s.add( quizVerbs() )
+    print "~~~~ 10 sentences"
+    s.add( quizSentence() )
+    print "~~~~ Big numbers"
+    s.add( quizBigNumbers() )
+    s.present()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    #quizRandom( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 4 )
-    quizGroup1Verbs()
+    quiz1()
