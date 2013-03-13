@@ -3,7 +3,7 @@
 # quiz. Authored by Nathan Ross Powell.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Imports.
-from random import shuffle, randrange
+from random import shuffle, randrange, sample
 # Local imports.
 import verbs as frenchVerbs
 from buildQuiz import                   \
@@ -24,8 +24,7 @@ def quizTensNumbers( words = True, trys = 3 ):
     quiz( makeFunctionItems( func, range( 10, 101, 10 ) ), trys )
 def quizRandom( numbersList, take, words = True, trys = 3 ):
     func = numberByWord if words else numberByNumber
-    shuffle( numbersList )
-    numbers = [ x for i, x in enumerate( numbersList ) if i < take ]
+    numbers = sample( numbersList, take )
     quiz( makeFunctionItems( func, numbers, shuffleThem = False ), trys )
 def quizBigNumbers( words = True, trys = 3 ):
     quizRandom( range( 101 ), 20, words = words, trys = trys )
@@ -43,4 +42,5 @@ def quizGroup2Verbs( french = True, tests = 3, trys = 3 ):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    quizIrregularVerbs()
+    #quizRandom( [ 1, 2, 3, 4, 5, 6, 7, 8 ], 4 )
+    quizGroup1Verbs()

@@ -3,7 +3,7 @@
 # buildQuiz. Authored by Nathan Ross Powell.
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Imports.
-from random import shuffle, randrange, choice
+from random import shuffle, randrange, choice, sample
 from functools import partial
 from functools import wraps
 # Local imports.
@@ -114,9 +114,8 @@ def verbAndRole( quizFunction, verbGroup, take, trys = 3 ):
     keysList = keys
     while len( keysList ) < take:
         keysList += keys
-    shuffle( keysList )
     r = lambda: choice( frenchVerbs.verbRoles )
-    randomKeys = [ ( x, r() ) for i, x in enumerate( keysList ) if i < take ]
+    randomKeys = [ ( x, r() ) for x in sample( keysList, take ) ]
     print "---------------------"
     print randomKeys
     print "---------------------"
