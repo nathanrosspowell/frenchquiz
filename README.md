@@ -23,6 +23,32 @@ Running
 Go to the directory where you have the files and open a command line, type the following:
 
     python quiz.py
+    
+This will run the main quiz which is set up to do a big test on all topics.
+If you want to do a specific test you can edit the part of the script under `if __name__ == "__main__":` or you can launch an interactive shell session.
+
+Open a `cmd`. 
+Use `pushd` to get to the folder with all the scripts in. 
+Start a Python session with `python`.
+Use `dir(quiz)` to list all the functions avaiable.
+Pick one of the functions starting with 'quiz' e.g. `quizVerbs` and call it like `quiz.quizVerbs()`
+
+    C:\Users\npowell> pushd C:\Users\npowell\Downloads\frenchquiz-master
+    C:\Users\npowell\Downloads\frenchquiz-master> python
+    Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win
+    32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import quiz
+    >>> dir(quiz)
+    ['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'frenchVerbs'
+    , 'frenchWords', 'makeFunctionItems', 'numberByNumber', 'numberByWord', 'quiz',
+    'quiz1', 'quizBigNumbers', 'quizGroup1Verbs', 'quizGroup2Verbs', 'quizIrregularS
+    entence', 'quizIrregularVerbs', 'quizLowNumbers', 'quizRandom', 'quizSentence',
+    'quizTensNumbers', 'quizVerbs', 'randrange', 'sample', 'scoreQuiz', 'sentece', '
+    sentenceEnglish', 'sentenceFrench', 'shuffle', 'verbAndRole', 'verbRoleEnglish',
+     'verbRoleFrench']
+    >>> quiz.quizVerbs()
+    
 
 [winpy]: http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi "Python installer for Windows 7"
 
