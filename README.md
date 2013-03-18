@@ -1,4 +1,4 @@
-frenchquiz
+French Quiz
 ==========
 
 Basic French language material with customizable quiz.
@@ -27,7 +27,6 @@ Go to the directory where you have the files and open a command line, type the f
 [winpy]: http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi "Python installer for Windows 7"
 
 ---
-
 Revision Notes
 ==============
 
@@ -47,26 +46,26 @@ There are no set rules to these, just learn them.
 
 #### Avoir
 
-    i       = j'ai
-    you     = tu as
+    i       = j'ai        - ( je + ai )
+    you     = tu as       - ( "two ahh" )
     he      = il a
     she     = elle a
     we      = nous avons
     you(p)  = vous avez
     they(m) = ils ont
     they(f) = elles ont
-
+    
 #### Être
 
-    i       = j'ai        - ( je + ai )
-    you     = tu as       - ( "two ahh" )
-    he      = il a
-    she     = elle a
-    we      = nous avons 
-    you(p)  = vous avez
-    they(m) = ils ont
-    they(f) = elles ont
-    
+    i = je suis
+    you = tu es 
+    he = il est
+    she = elle est
+    we = nous sommes 
+    you(p)" = vous etes
+    they(m)" = ils sont
+    they(f)" = elles sont
+
 Some basic usage
 
     Je vais ai metro          = I go to the metro
@@ -85,7 +84,7 @@ Some basic usage
     they(m) = ils vont
     they(f) = elle vont
 
-    
+---
 Lesson 2
 --------
 
@@ -130,6 +129,7 @@ Note again the way of making 70 and 90.
     90  = quatre vingts dix
     100 = cent
     
+---
 Lesson 3
 --------
 
@@ -142,7 +142,8 @@ Father and son are masculine, the rest are feminine.
     father     = le père
     son        = le fils       - ( "fiss" )
     daughter   = la fille      - ( "fee" )
-    
+
+---    
 Lesson 4
 --------
 
@@ -159,7 +160,7 @@ These verbs ending in `er` all conjigate the same way.
     they(m) = ils ****est
     they(f) = elles ****est
     
-The verbs:
+The verbs
 
     bring   = apporter
     carry   = transporter
@@ -181,11 +182,16 @@ The verbs:
     study   = etudier
     work    = travailler
     
+Some basic usage
+
+    J'ai manger les pains                             = I eat bread
+    Nous étudions le Français                         = We study French
+    J'aime regarder les Simpsons chaque Vendredi soir = I like to watch The Simpson every Friday night
+    
 ### Making a  negative sentence
 
 You can add two words around the verb to make a sentence negative: `ne pas`
 
-    Je parle Français        = I speak French
-    Je ne parle pas Français = I do not speak French
-    
-    
+    Je parle Français              = I speak French
+    Je ne parle pas Français       = I do not speak French
+    Je n'aime pas manger les pains = I do not eat bread
