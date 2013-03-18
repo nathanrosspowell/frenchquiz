@@ -55,6 +55,32 @@
 <pre><code>python quiz.py
 </code></pre>
 
+<p>This will run the main quiz which is set up to do a big test on all topics.
+If you want to do a specific test you can edit the part of the script under <code>if __name__ == "__main__":</code> or you can launch an interactive shell session.</p>
+
+<p>Open a <code>cmd</code>. 
+Use <code>pushd</code> to get to the folder with all the scripts in. 
+Start a Python session with <code>python</code>.
+Use <code>dir(quiz)</code> to list all the functions avaiable.
+Pick one of the functions starting with 'quiz' e.g. <code>quizVerbs</code> and call it like <code>quiz.quizVerbs()</code></p>
+
+<pre><code>C:\Users\npowell&gt; pushd C:\Users\npowell\Downloads\frenchquiz-master
+C:\Users\npowell\Downloads\frenchquiz-master&gt; python
+Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win
+32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import quiz
+&gt;&gt;&gt; dir(quiz)
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'frenchVerbs'
+, 'frenchWords', 'makeFunctionItems', 'numberByNumber', 'numberByWord', 'quiz',
+'quiz1', 'quizBigNumbers', 'quizGroup1Verbs', 'quizGroup2Verbs', 'quizIrregularS
+entence', 'quizIrregularVerbs', 'quizLowNumbers', 'quizRandom', 'quizSentence',
+'quizTensNumbers', 'quizVerbs', 'randrange', 'sample', 'scoreQuiz', 'sentece', '
+sentenceEnglish', 'sentenceFrench', 'shuffle', 'verbAndRole', 'verbRoleEnglish',
+ 'verbRoleFrench']
+&gt;&gt;&gt; quiz.quizVerbs()
+</code></pre>
+
 <hr><h1>Revision Notes</h1>
 
 <h2>Lesson 1</h2>
