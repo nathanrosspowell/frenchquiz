@@ -28,6 +28,8 @@ Go to the directory where you have the files and open a command line, type the f
 This will run the main quiz which is set up to do a big test on all topics.
 If you want to do a specific test you can edit the part of the script under `if __name__ == "__main__":` or you can launch an interactive shell session.
 
+#### Interactive shell session
+
 Open a `cmd`. 
 Use `pushd` to get to the folder with all the scripts in. 
 Start a Python session with `python`.
@@ -50,6 +52,7 @@ Pick one of the functions starting with 'quiz' e.g. `quizVerbs` and call it like
      'verbRoleFrench']
     >>> quiz.quizVerbs()
     
+Use `Ctrl+c` to exit out, or just close the `cmd` application.
 
 [winpy]: http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi "Python installer for Windows 7"
 
