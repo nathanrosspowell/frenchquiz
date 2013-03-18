@@ -13,9 +13,10 @@ These scripts use Python 2.7. It is tested on these OS's:
 
 #### Windows install
 
-Python 2.7 is included in the standard Ubuntu 12.04 install. To get the needed software on windows, please use download the [Python 2.7 MSI][winpy].
+Python 2.7 is included in the standard Ubuntu 12.04 install. To get the needed software on windows, please download the [Python 2.7 MSI][winpy].
 
 It is advised to put the Python install on your `Path` so you can simplify inovking of python scripts.
+If not, try using the default Python path `C:\Python27\python.exe`
 
 Running
 -------
