@@ -88,12 +88,12 @@ There are no set rules to these, just learn them.
     
 #### Être
 
-    i = je suis
-    you = tu es 
-    he = il est
-    she = elle est
-    we = nous sommes 
-    you(p)" = vous etes
+    i        = je suis
+    you      = tu es 
+    he       = il est
+    she      = elle est
+    we       = nous sommes 
+    you(p)"  = vous etes
     they(m)" = ils sont
     they(f)" = elles sont
 
@@ -179,13 +179,13 @@ Lesson 4
 
 These verbs ending in `er` all conjigate the same way.
 
-    i = Je ****e
-    you = tu ****es
-    he = il ****e
-    she = elle ****e
-    we = nous ****ons
-    you(p) = vous ****ez
-    they(m) = ils ****est
+    i       =    Je ****e
+    you     =    tu ****es
+    he      =    il ****e
+    she     =  elle ****e
+    we      =  nous ****ons
+    you(p)  =  vous ****ez
+    they(m) =   ils ****est
     they(f) = elles ****est
     
 The verbs
@@ -231,13 +231,13 @@ Lesson 5
 
 These verbs ending in `ir` all conjigate the same way.
 
-    i       = Je *****is
-    you     = tu *****is
-    he      = il *****it
-    she     = elle *****it
-    we      = nous  *****essons
-    you(p)  = vous *****essez
-    they(m) = ils *****essent
+    i       =    Je *****is
+    you     =    tu *****is
+    he      =    il *****it
+    she     =  elle *****it
+    we      =  nous *****essons
+    you(p)  =  vous *****essez
+    they(m) =   ils *****essent
     they(f) = elles *****essent
     
 The verbs
