@@ -57,6 +57,7 @@ Use `Ctrl+c` to exit out, or just close the `cmd` application.
 [winpy]: http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi "Python installer for Windows 7"
 
 ---
+
 Revision Notes
 ==============
 
@@ -114,7 +115,6 @@ Some basic usage
     they(m) = ils vont
     they(f) = elle vont
 
----
 Lesson 2
 --------
 
@@ -159,7 +159,6 @@ Note again the way of making 70 and 90.
     90  = quatre vingts dix
     100 = cent
     
----
 Lesson 3
 --------
 
@@ -173,7 +172,6 @@ Father and son are masculine, the rest are feminine.
     son        = le fils       - ( "fiss" )
     daughter   = la fille      - ( "fee" )
 
----    
 Lesson 4
 --------
 
@@ -225,3 +223,50 @@ You can add two words around the verb to make a sentence negative: `ne pas`
     Je parle Français              = I speak French
     Je ne parle pas Français       = I do not speak French
     Je n'aime pas manger les pains = I do not eat bread
+    
+Lesson 5
+--------
+
+### Group 1 verbs
+
+These verbs ending in `ir` all conjigate the same way.
+
+    i       = Je *****is
+    you     = tu *****is
+    he      = il *****it
+    she     = elle *****it
+    we      = nous  *****essons
+    you(p)  = vous *****essez
+    they(m) = ils *****essent
+    they(f) = elles *****essent
+    
+The verbs
+
+    act       = agir
+    age       = vielillir
+    arise     = unite
+    choose    = choisir
+    coution   = avertir
+    cure      = guerir
+    daze      = etourdir
+    decay     = pourrir
+    destroy   = demolir
+    disobey   = desobeir
+    divide    = repatir
+    establish = etablir
+    feed      = nourrir
+    fill      = remplir
+    finish    = finir
+    groan     = gemir
+    hate      = hair
+    obey      = obeir
+    pail      = palir
+    polish    = polir
+    roast     = rotir
+    salir     = soil
+    shorten   = raccurcir
+    slow down = ralentir
+    undergo   = subir
+    unite     = unir
+    vomit     = vomir
+
