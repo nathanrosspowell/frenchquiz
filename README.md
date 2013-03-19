@@ -35,6 +35,7 @@ Use `pushd` to get to the folder with all the scripts in.
 Start a Python session with `python`.
 Use `dir(quiz)` to list all the functions avaiable.
 Pick one of the functions starting with 'quiz' e.g. `quizVerbs` and call it like `quiz.quizVerbs()`
+Add the named parameter `tests` to increase the number of questions.
 
     C:\Users\npowell> pushd C:\Users\npowell\Downloads\frenchquiz-master
     C:\Users\npowell\Downloads\frenchquiz-master> python
@@ -50,7 +51,7 @@ Pick one of the functions starting with 'quiz' e.g. `quizVerbs` and call it like
     'quizTensNumbers', 'quizVerbs', 'randrange', 'sample', 'scoreQuiz', 'sentece', '
     sentenceEnglish', 'sentenceFrench', 'shuffle', 'verbAndRole', 'verbRoleEnglish',
      'verbRoleFrench']
-    >>> quiz.quizVerbs()
+    >>> quiz.quizVerbs(tests=25)
     
 Use `Ctrl+c` to exit out, or just close the `cmd` application.
 
