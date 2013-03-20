@@ -65,7 +65,8 @@ If you want to do a specific test you can edit the part of the script under <cod
 Use <code>pushd</code> to get to the folder with all the scripts in. 
 Start a Python session with <code>python</code>.
 Use <code>dir(quiz)</code> to list all the functions avaiable.
-Pick one of the functions starting with 'quiz' e.g. <code>quizVerbs</code> and call it like <code>quiz.quizVerbs()</code></p>
+Pick one of the functions starting with 'quiz' e.g. <code>quizVerbs</code> and call it like <code>quiz.quizVerbs()</code>
+Add the named parameter <code>tests</code> to increase the number of questions.</p>
 
 <pre><code>C:\Users\npowell&gt; pushd C:\Users\npowell\Downloads\frenchquiz-master
 C:\Users\npowell\Downloads\frenchquiz-master&gt; python
@@ -81,14 +82,14 @@ entence', 'quizIrregularVerbs', 'quizLowNumbers', 'quizRandom', 'quizSentence',
 'quizTensNumbers', 'quizVerbs', 'randrange', 'sample', 'scoreQuiz', 'sentece', '
 sentenceEnglish', 'sentenceFrench', 'shuffle', 'verbAndRole', 'verbRoleEnglish',
  'verbRoleFrench']
-&gt;&gt;&gt; quiz.quizVerbs()
+&gt;&gt;&gt; quiz.quizVerbs(tests=25)
 </code></pre>
 
 <p>Use <code>Ctrl+c</code> to exit out, or just close the <code>cmd</code> application.</p>
 
 <hr><h1>Revision Notes</h1>
 
-<h2>Lesson 1</h2>
+<h2>Section 1</h2>
 
 <h3>The irregular verbs</h3>
 
@@ -117,12 +118,12 @@ they(f) = elles ont
 
 <h4>Être</h4>
 
-<pre><code>i = je suis
-you = tu es 
-he = il est
-she = elle est
-we = nous sommes 
-you(p)" = vous etes
+<pre><code>i        = je suis
+you      = tu es 
+he       = il est
+she      = elle est
+we       = nous sommes 
+you(p)"  = vous etes
 they(m)" = ils sont
 they(f)" = elles sont
 </code></pre>
@@ -144,10 +145,10 @@ she     = elle va
 we      = nous allons
 you(p)  = vous allez
 they(m) = ils vont
-they(f) = elle vont
+they(f) = elles vont
 </code></pre>
 
-<h2>Lesson 2</h2>
+<h2>Section 2</h2>
 
 <h3>The numbers</h3>
 
@@ -192,7 +193,7 @@ they(f) = elle vont
 100 = cent
 </code></pre>
 
-<h2>Lesson 3</h2>
+<h2>Section 3</h2>
 
 <h4>Family members</h4>
 
@@ -205,19 +206,19 @@ son        = le fils       - ( "fiss" )
 daughter   = la fille      - ( "fee" )
 </code></pre>
 
-<h2>Lesson 4</h2>
+<h2>Section 4</h2>
 
 <h3>Group 1 verbs</h3>
 
 <p>These verbs ending in <code>er</code> all conjigate the same way.</p>
 
-<pre><code>i = Je ****e
-you = tu ****es
-he = il ****e
-she = elle ****e
-we = nous ****ons
-you(p) = vous ****ez
-they(m) = ils ****est
+<pre><code>i       =    Je ****e
+you     =    tu ****es
+he      =    il ****e
+she     =  elle ****e
+we      =  nous ****ons
+you(p)  =  vous ****ez
+they(m) =   ils ****est
 they(f) = elles ****est
 </code></pre>
 
@@ -260,19 +261,19 @@ Je ne parle pas Français       = I do not speak French
 Je n'aime pas manger les pains = I do not eat bread
 </code></pre>
 
-<h2>Lesson 5</h2>
+<h2>Section 5</h2>
 
 <h3>Group 1 verbs</h3>
 
 <p>These verbs ending in <code>ir</code> all conjigate the same way.</p>
 
-<pre><code>i       = Je *****is
-you     = tu *****is
-he      = il *****it
-she     = elle *****it
-we      = nous  *****essons
-you(p)  = vous *****essez
-they(m) = ils *****essent
+<pre><code>i       =    Je *****is
+you     =    tu *****is
+he      =    il *****it
+she     =  elle *****it
+we      =  nous *****essons
+you(p)  =  vous *****essez
+they(m) =   ils *****essent
 they(f) = elles *****essent
 </code></pre>
 
@@ -299,12 +300,86 @@ obey      = obeir
 pail      = palir
 polish    = polir
 roast     = rotir
-salir     = soil
 shorten   = raccurcir
 slow down = ralentir
+soil      = salir
 undergo   = subir
 unite     = unir
 vomit     = vomir
+</code></pre>
+
+<h2>Section 6</h2>
+
+<h3>Questions</h3>
+
+<p>How to make a statement into a yes/no question, either add <code>Est-ce que</code> or switch the order of the role and the verb.</p>
+
+<pre><code>Tu aimis une table.           = You like the table. (statement)
+Aimis tu une table?           = You like the table? (question)
+Est-ce quetu aimis une table? = You like the table? (question)
+</code></pre>
+
+<p>How to make a question that needs a detailed answer by starting with <code>Qu'est-ce</code>.</p>
+
+<pre><code>Tu fais.                = You do.             (statement)
+Qu'est-ce que tu fais?  = What are you doing? (question)
+Tu aimes.               = You like.           (statement)
+Qu'est-ce que tu aimes? = What do you like?   (question)
+</code></pre>
+
+<p>Questioning words</p>
+
+<pre><code>quel   = what (masculine)
+quelle = what (feminine)
+qui    = who
+quand  = when
+qù     = where
+</code></pre>
+
+<h2>Section 7</h2>
+
+<h3>Ownership</h3>
+
+<p>The variations for the word <code>je</code></p>
+
+<pre><code>my = mon (singular masculine)
+my = ma  (singular femiine)
+my = mes (plural)
+</code></pre>
+
+<p>The variations for the word <code>tu</code></p>
+
+<pre><code>your = ton (singular masculine)
+your = ta  (singular femiine)
+your = tes (plural)
+</code></pre>
+
+<p>The variations for the word <code>il/elle</code></p>
+
+<pre><code>their = son (singular masculine)
+their = sa  (singular femiine)
+their = ses (plural)
+</code></pre>
+
+<p>The variations for the word <code>the</code></p>
+
+<pre><code>the = le  (masculine)
+the = la  (femiine)
+the = les (plural)
+</code></pre>
+
+<p>The variations for the word <code>to</code> (going to)</p>
+
+<pre><code>to = a la (masculine)
+to = au   (femiine)
+to = aux  (plural)
+</code></pre>
+
+<p>And now, some examples</p>
+
+<pre><code>Mon t-shirt  = My t-shirt
+Ma casquette = My cap
+Mes souliers = My shoes
 </code></pre>
       </section>
     </div>
