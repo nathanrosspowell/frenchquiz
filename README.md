@@ -62,7 +62,7 @@ Use `Ctrl+c` to exit out, or just close the `cmd` application.
 Revision Notes
 ==============
 
-Lesson 1
+Section 1
 --------
 
 ### The irregular verbs
@@ -116,7 +116,7 @@ Some basic usage
     they(m) = ils vont
     they(f) = elles vont
 
-Lesson 2
+Section 2
 --------
 
 ### The numbers
@@ -160,7 +160,7 @@ Note again the way of making 70 and 90.
     90  = quatre vingts dix
     100 = cent
     
-Lesson 3
+Section 3
 --------
 
 #### Family members
@@ -173,7 +173,7 @@ Father and son are masculine, the rest are feminine.
     son        = le fils       - ( "fiss" )
     daughter   = la fille      - ( "fee" )
 
-Lesson 4
+Section 4
 --------
 
 ### Group 1 verbs
@@ -225,7 +225,7 @@ You can add two words around the verb to make a sentence negative: `ne pas`
     Je ne parle pas Français       = I do not speak French
     Je n'aime pas manger les pains = I do not eat bread
     
-Lesson 5
+Section 5
 --------
 
 ### Group 1 verbs
@@ -264,10 +264,78 @@ The verbs
     pail      = palir
     polish    = polir
     roast     = rotir
-    salir     = soil
     shorten   = raccurcir
     slow down = ralentir
+    soil      = salir
     undergo   = subir
     unite     = unir
     vomit     = vomir
+    
+Section 6
+---------
 
+### Questions
+
+How to make a statement into a yes/no question, either add `Est-ce que` or switch the order of the role and the verb.
+
+    Tu aimis une table.           = You like the table. (statement)
+    Aimis tu une table?           = You like the table? (question)
+    Est-ce quetu aimis une table? = You like the table? (question)
+    
+How to make a question that needs a detailed answer by starting with `Qu'est-ce`.
+    
+    Tu fais.                = You do.             (statement)
+    Qu'est-ce que tu fais?  = What are you doing? (question)
+    Tu aimes.               = You like.           (statement)
+    Qu'est-ce que tu aimes? = What do you like?   (question)
+    
+Questioning words
+
+    quel   = what (masculine)
+    quelle = what (feminine)
+    qui    = who
+    quand  = when
+    qù     = where
+    
+Section 7
+---------
+
+### Ownership
+
+The variations for the word `je`
+
+    my = mon (singular masculine)
+    my = ma  (singular femiine)
+    my = mes (plural)
+    
+The variations for the word `tu`
+
+    your = ton (singular masculine)
+    your = ta  (singular femiine)
+    your = tes (plural)
+    
+The variations for the word `il/elle`
+
+    their = son (singular masculine)
+    their = sa  (singular femiine)
+    their = ses (plural)
+    
+The variations for the word `the`
+
+    the = le  (masculine)
+    the = la  (femiine)
+    the = les (plural)
+    
+The variations for the word `to` (going to)
+
+    to = a la (masculine)
+    to = au   (femiine)
+    to = aux  (plural)
+
+
+And now, some examples
+
+    Mon t-shirt  = My t-shirt
+    Ma casquette = My cap
+    Mes souliers = My shoes
+    
