@@ -114,7 +114,7 @@ Some basic usage
     we      = nous allons
     you(p)  = vous allez
     they(m) = ils vont
-    they(f) = elle vont
+    they(f) = elles vont
 
 Lesson 2
 --------
