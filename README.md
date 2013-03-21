@@ -58,7 +58,6 @@ Use `Ctrl+c` to exit out, or just close the `cmd` application.
 [winpy]: http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi "Python installer for Windows 7"
 
 ---
-
 Revision Notes
 ==============
 
@@ -149,16 +148,17 @@ The low numbers which are all used again for big numbers, e.g. 79 is read like 6
 
 Note again the way of making 70 and 90.
 
-    10  = dix
-    20  = vingt
-    30  = trente
-    40  = quarante
-    50  = cinquante
-    60  = soixante
-    70  = soixante dix
-    80  = quatre vingts
-    90  = quatre vingts dix
-    100 = cent
+    10   = dix
+    20   = vingt
+    30   = trente
+    40   = quarante
+    50   = cinquante
+    60   = soixante
+    70   = soixante dix
+    80   = quatre vingts
+    90   = quatre vingts dix
+    100  = cent
+    1000 = mille
     
 Section 3
 --------
@@ -297,6 +297,13 @@ Questioning words
     quand  = when
     qù     = where
     
+    
+Simple question 
+
+    is it? = est-ce que c'est?
+    is it? = est-ce?
+    it is  = c'est
+    
 Section 7
 ---------
 
@@ -339,3 +346,41 @@ And now, some examples
     Ma casquette = My cap
     Mes souliers = My shoes
     
+    
+Section 8
+---------
+
+### Some general vocab
+
+    table        = une table
+    sofa         = un sofa
+    library      = la bibliothèque
+    corner store = le dépanneur
+    cigarette    = une cigarette
+    bathroom     = la salle de bain
+    home         = maison
+    metro        = au metro
+    bread        = les pains
+    hockey       = le hockey
+    food         = la nourriture
+    sentence     = phrase
+    movie        = la film
+    never        = jamais
+    always       = toujours
+    in           = dans
+    on           = sur
+    every        = chaque
+    tonight      = ce soir    
+    
+### Places
+ 
+    Montreal = au Montrèal
+    
+### Nationality
+    
+    North American(m) = American du North
+    North American(f) = Americane du North
+    African(m)        = Africain
+    African(f)        = Africaine
+    Indian(m)         = Indien
+    Indian(f)         = Indienne
