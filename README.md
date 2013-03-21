@@ -236,10 +236,10 @@ These verbs ending in `ir` all conjigate the same way.
     you     =    tu *****is
     he      =    il *****it
     she     =  elle *****it
-    we      =  nous *****essons
-    you(p)  =  vous *****essez
-    they(m) =   ils *****essent
-    they(f) = elles *****essent
+    we      =  nous *****issons
+    you(p)  =  vous *****issez
+    they(m) =   ils *****issent
+    they(f) = elles *****issent
     
 The verbs
 
