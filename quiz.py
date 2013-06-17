@@ -79,4 +79,7 @@ def quiz1():
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    quiz1()
+    try:
+        quiz1()
+    except ( KeyboardInterrupt, SystemExit ):
+        print "\n\nQUITTER!.....\n"

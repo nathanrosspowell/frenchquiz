@@ -34,4 +34,4 @@ def getVerbAndRole( role, verb ):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print getRegularVerb( "she", "hate", "you" )
+    print getRegularVerb( "she", "hate" )
