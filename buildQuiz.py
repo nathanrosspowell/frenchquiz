@@ -7,7 +7,10 @@ from random import shuffle, randrange, choice, sample
 from functools import partial
 from functools import wraps
 # Local imports.
-import words as frenchWords
+from words import \
+        words as frenchWords,\
+        singular as wordsSingular,\
+        verbs as wordsVerbs
 import verbs as frenchVerbs
 import buildVerb
 import numbers as frenchNumbers
@@ -139,6 +142,7 @@ def sentenceEnglish( params, trys = 3 ):
     return answerWord == english, english
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Write verb and role
+"""
 def sentece( quizFunction, verbGroup, wordGroup, take, trys = 3 ):
     keys = verbGroup.keys() 
     wordKeys = wordGroup.keys()
@@ -150,8 +154,22 @@ def sentece( quizFunction, verbGroup, wordGroup, take, trys = 3 ):
     i = lambda: choice( wordKeys )
     randomKeys = [ ( x, r(), i() ) for x in sample( keysList, take ) ]
     return quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
+"""
+# Write verb and role
+def sentece( quizFunction, verbGroup, wordGroup, take, trys = 3 ):
+    keys = verbGroup.keys() 
+    wordKeys = wordGroup.keys()
+    # Append the list until we have more items that the number of test.
+    itemList = wordKeys
+    while len( itemList ) < take:
+        itemList += wordKeys
+    v = lambda i: choice( frenchWords[ i ][ wordsVerbs ] ) # verb
+    r = lambda: choice( frenchVerbs.verbRoles ) # role
+    randomKeys = [ ( v( i ), r(), i ) for i in sample( itemList, take ) ]
+    for r in randomKeys:
+        print r
+    return quiz( makeFunctionItems( quizFunction, randomKeys ), trys )
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    #verbAndRole( verbRoleFrench, frenchVerbs.verbsGroup1, 4 )
-    sentece( sentenceEnglish, frenchVerbs.verbsGroup1, frenchWords.words, 4 )
+    sentece( sentenceEnglish, frenchVerbs.verbsGroup1, frenchWords, 2 )

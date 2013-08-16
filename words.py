@@ -5,11 +5,35 @@
 # Imports.
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Globals.
+singular = "singular"
+plural = "plural"
+verbs = "verbs"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Some French words with gender. 
 words = {
-    "table" : ( "table", "une" ),
+    "table" : { 
+        singular: ( "table", "la" ), 
+        plural : ( "tables", "les" ),
+        verbs : ( 
+            "have",
+            "create",
+            "draw",
+        )
+    },
+    "chicken" : {
+        singular : ( "poulet", "le" ),
+        plural : ( "poulets", "les" ),
+        verbs : (
+            "have",
+            "hate",
+            "like",
+            "eat",
+        )
+    },
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print words
+    for english, french in words.items():
+        print english, ":", french[ singular ][ 1 ], french[ singular ][ 0 ] 

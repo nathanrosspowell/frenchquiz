@@ -9,11 +9,15 @@ import buildVerb
 # Build a sentence. 
 def getSentence( role, verb, item ):
     verbRole = buildVerb.getVerbAndRole( role, verb )
-    word, gender = words.get( item, ( "table", "une" ) )
+    itemDetails = words.get( item, None )
+    if itemDetails is None:
+        word, gender = "table", "le"
+    else:
+        word, gender = itemDetails[ singular ] 
     french = "%s %s %s" % ( verbRole[ 0 ], gender, word, )
-    english = "%s %s" % ( verbRole[ 1 ], word, )
+    english = "%s %s" % ( verbRole[ 1 ], item, )
     return french, english
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
-    print getSentence( "she", "hate", "table" )
+    print getSentence( "she", "eat", "chicken" )
