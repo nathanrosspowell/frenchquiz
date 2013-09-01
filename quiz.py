@@ -77,9 +77,17 @@ def quiz1():
     s.add( quizBigNumbers() )
     s.present()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Quiz 2.
+def quiz2():
+    s = scoreQuiz.Scores()
+    print "~~~~ Words and stuff"
+    s.add( quizSentence() )
+    s.present()
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main test.
 if __name__ == "__main__":
     try:
-        quiz1()
+        #quiz1()
+        quiz2()
     except ( KeyboardInterrupt, SystemExit ):
         print "\n\nQUITTER!.....\n"

@@ -22,10 +22,9 @@ words = {
         )
     },
     "chicken" : {
-        singular : ( "poulet", "le" ),
+        singular : ( "poulet", "du" ),
         plural : ( "poulets", "les" ),
         verbs : (
-            "have",
             "hate",
             "like",
             "eat",
