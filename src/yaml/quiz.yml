@@ -1,0 +1,49 @@
+Quiz1:
+    name: Number 1
+    intro: >
+        Ding dong
+    lesson:
+        - title: Verbs
+          body: >
+            HEy now people..............
+            HEy now people..............
+            HEy now people..............
+            HEy now people..............
+        - title: Verbs2
+          body: >
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+    quiz:
+        - title: Question 1
+          question: What is better than a cat?
+          answer: dog
+        - title: Question 2
+          question: What is better than two cats?
+          answer: two dogs
+Quiz2:
+    name: Number 2
+    intro: >
+        Ding dong
+    lesson:
+        - title: Verbs
+          body: >
+            HEy now people..............
+            HEy now people..............
+            HEy now people..............
+            HEy now people..............
+        - title: Verbs2
+          body: >
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+    quiz:
+        - title: Question 1
+          question: What is better than a cat?
+          answer: dog
+        - title: Question 2
+          question: What is better than two cats?
+          answer: two dogs
+        
