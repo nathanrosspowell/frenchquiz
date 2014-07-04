@@ -93,14 +93,14 @@
         {{#each quiz}}
             <h2 id="{{ @key }}">{{ name }}</h2>
             <p>
-                {{ intro }}
+                {{{ intro }}}
             </p>
             <hr>
             <h3> Lessons </h4>
             {{#each lesson}}
                 <h3> {{ title }}</h4>
                 <p>
-                    {{ body }}
+                    {{{ body }}}
                 </p>
             {{/each}}  
             <div class="row">
@@ -110,10 +110,10 @@
                             <div class="panel-heading"><h3>{{ title }}</h3></div>
                             <div class="panel-body">
                                 <p>
-                                    {{ question }}
+                                    {{{ question }}}
                                 </p>
                                 <p>
-                                    Make this a form: {{ answer }}
+                                    Make this a form: {{{ answer }}}
                                 </p>
                             </div>
                         </div>

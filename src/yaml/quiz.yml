@@ -13,8 +13,12 @@ Quiz1:
           body: >
             Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
             Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+                
+                <pre>Code Example
+                Really?</pre>
+                
             Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
-            Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
+            Give me a `YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA`. Give me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAAGive me a YEAHAAAAA.
     quiz:
         - title: Question 1
           question: What is better than a cat?

@@ -2,6 +2,8 @@
 var fs = require('fs');
 var path = require('path');
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var builtJSON = 'temp/built.json';
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
@@ -99,7 +101,7 @@ module.exports = function(grunt) {
         'compile-handlebars': {
             frenchQuiz: {
                 template: 'src/**/*.handlebars',
-                templateData: 'temp/built.json',
+                templateData: builtJSON,
                 output: 'build/**/*index.html'
             }
         },
@@ -146,6 +148,41 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-prettify');
     grunt.loadNpmTasks('grunt-jsbeautifier');
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // Task to turn all text inside of the JSON into markdown output
+    grunt.task.registerTask("tomd", "JSON->Markdown", function() {
+        var options =  {
+            preCompile: function(src, context) {},
+            postCompile: function(src, context) {},
+            templateContext: {},
+            markdownOptions: {
+              gfm: true,
+              highlight: 'manual',
+              codeLines: {
+                before: '<span>',
+                after: '</span>'
+              }
+            }
+        };
+        // Tell Grunt this task is asynchronous.
+        var done = this.async();
+        fs.readFile(builtJSON, 'utf8', function (err,data) {
+            if (err) {
+                return console.log(err);
+            }
+            var markdownLib = './node_modules/grunt-markdown/tasks/lib/markdown';
+            var markdown = require(markdownLib).init(grunt);
+            content = markdown.markdown(data,options,'<%=content%>')
+            fs.writeFile(builtJSON, content, function(err) {
+                if(err) {
+                    return console.log(err);
+                } else {
+                    done(true);
+                }
+            }); 
+        });
+        
+    });
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Default task: does everything except deployment
     grunt.registerTask('default', ['make-yaml', 'handlebars', 'uglify', 'copy']);
