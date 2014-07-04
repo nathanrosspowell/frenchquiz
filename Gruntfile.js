@@ -151,6 +151,21 @@ module.exports = function(grunt) {
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Task to turn all text inside of the JSON into markdown output
     grunt.task.registerTask("tomd", "JSON->Markdown", function() {
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        function recurseObject(object) {
+            for (var property in object) {
+                if (object.hasOwnProperty(property)) {
+                    if (typeof object[property] == "object"){
+                        recurseObject(object[property]);
+                    }else if (typeof object[property] == 'string'){
+                        object[property] = markdown.markdown(object[property]
+                            , options
+                            ,'<%=content%>');
+                    }
+                }
+            }
+        }
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         var options =  {
             preCompile: function(src, context) {},
             postCompile: function(src, context) {},
@@ -164,15 +179,19 @@ module.exports = function(grunt) {
               }
             }
         };
+        var markdownLib = './node_modules/grunt-markdown/tasks/lib/markdown';
+        var markdown = require(markdownLib).init(grunt);
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // Tell Grunt this task is asynchronous.
         var done = this.async();
         fs.readFile(builtJSON, 'utf8', function (err,data) {
             if (err) {
                 return console.log(err);
             }
-            var markdownLib = './node_modules/grunt-markdown/tasks/lib/markdown';
-            var markdown = require(markdownLib).init(grunt);
-            content = markdown.markdown(data,options,'<%=content%>')
+            var obj = JSON.parse(data);
+            recurseObject(obj);
+            content = JSON.stringify(obj, null, 2);
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             fs.writeFile(builtJSON, content, function(err) {
                 if(err) {
                     return console.log(err);
