@@ -6,10 +6,12 @@ module.exports = function(options){
     var quizes = [
         { 
             name: "Basic Quiz",
+            id: "basic_quiz",
             context: this.quiz
         },
         { 
             name: "Next Quiz",
+            id: "next_quiz",
             context: this.quiz2
         }
     ];
@@ -18,6 +20,7 @@ module.exports = function(options){
 	for (var i = 0; i < quizes.length; i++) {
         var context = quizes[i].context;
         context.name = quizes[i].name;
+        context.id = quizes[i].id;
         context.index = i;
         result += options.fn( context );
 	}

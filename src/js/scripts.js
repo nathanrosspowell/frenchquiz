@@ -1,5 +1,5 @@
 /* activate sidebar */
-$('#sidebar').affix({
+$('.sidebar').affix({
   offset: {
     top: 235
   }

@@ -3,16 +3,7 @@ section:
         name: Q2 - 1
         intro:
             markdown: |
-                Ding dong
-                - one
-                - two 
-                - two 
-                - two 
-                - two 
-                - three
-                ###DAMNNNN
-
-                    ##EHYYY
+                two two two 
         lesson:
             -   title: Verbs
                 body:
@@ -38,16 +29,7 @@ section:
         name: Q2 - 2
         intro:
             markdown: |
-                Ding dong
-                - one
-                - two 
-                - two 
-                - two 
-                - two 
-                - three
-                ###DAMNNNN
-
-                    ##EHYYY
+                two two two 
         lesson:
             -   title: Verbs
                 body:

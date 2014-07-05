@@ -49,14 +49,14 @@ body {
   	width:228px;
   }
   
-  #sidebar.affix {
+  .sidebar.affix {
     position: fixed;
     top:70px;
     width:228px;
   }
 }
 
-#sidebar li.active {
+.sidebar li.active {
   border:0 #eee solid;
   border-right-width:5px;
 }

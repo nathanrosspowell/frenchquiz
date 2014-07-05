@@ -1,18 +1,10 @@
 section:
     q1one:
-        name: Q2 - 1
+        name: Q1 - 1
         intro:
             markdown: |
-                Ding dong
-                - one
-                - two 
-                - two 
-                - two 
-                - two 
-                - three
-                ###DAMNNNN
+               one one one one
 
-                    ##EHYYY
         lesson:
             -   title: Verbs
                 body:
@@ -35,19 +27,10 @@ section:
               question: What is better than two cats?
               answer: two dogs
     q1two:
-        name: Q2 - 2
+        name: Q1 - 2
         intro:
             markdown: |
-                Ding dong
-                - one
-                - two 
-                - two 
-                - two 
-                - two 
-                - three
-                ###DAMNNNN
-
-                    ##EHYYY
+                one one one one
         lesson:
             -   title: Verbs
                 body:
