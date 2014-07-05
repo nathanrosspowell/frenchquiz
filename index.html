@@ -1,446 +1,622 @@
 <!DOCTYPE html>
-<html>
-
+<html class="no-js" lang="">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Frenchquiz : Basic French language material with customizable quiz." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Frenchquiz</title>
+    <meta name="description" content="">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>French Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylesheet" href="css/boilerplate.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css" />
   </head>
-
+  <!-- Credit http://www.bootply.com/100983 -->
+  <!-- Credit https://gist.github.com/mnewt/4228037 -->
   <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nathanrosspowell/frenchquiz">View on GitHub</a>
-
-          <h1 id="project_title">Frenchquiz</h1>
-          <h2 id="project_tagline">Basic French language material with customizable quiz.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/nathanrosspowell/frenchquiz/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/nathanrosspowell/frenchquiz/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>
+            French Quiz
+          </h1>
+          <p class="lead">
+            <p>This is a website generated to test French skills. Each quiz will help you better understand the language.</p>
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
+              </div>
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    View on <a href="https://github.com/nathanrosspowell/frenchquiz">GitHub</a>
+                  </li>
+                  <li>
+                    Report an <a href="https://github.com/nathanrosspowell/frenchquiz/issues">issue</a>
+                  </li>
+                  <li>
+                    Talk to <a href="http://twitter.com/nathanross/issues">@nathanross</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active">
+          <a href="#basic_quiz" data-toggle="tab">
+                            Basic Quiz
+            </a>
+        </li>
+        <li>
+          <a href="#next_quiz" data-toggle="tab">
+                            Next Quiz
+            </a>
+        </li>
+      </ul>
+      <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="basic_quiz">
+          <div class="row">
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+              <ul class="nav nav-stacked sidebar">
+                <li>
+                  <a class="scroller" href="#q1one">
+                      Q1 - 1
+                    </a>
+                </li>
+                <li>
+                  <a class="scroller" href="#q1two">
+                      Q1 - 2
+                    </a>
+                </li>
+              </ul>
+            </div>
+            <!--/left-->
+            <!--right-->
+            <div class="col-md-9">
+              <h2 id="q1one">Q1 - 1</h2>
+              <p>one one one one</p>
+              <hr/>
+              <h3> Lessons </h3>
+              <h3>Verbs</h3>
+              <p>This is some body text. This is line 2.</p>
+              <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+              <p>This is line 5.</p>
+              <h3>Verbs2</h3>
+              <p>This is some body text.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 1</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-basic_quiz-q1one-0" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than a cat?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 2</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-basic_quiz-q1one-1" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than two cats?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+              <h2 id="q1two">Q1 - 2</h2>
+              <p>one one one one</p>
+              <hr/>
+              <h3> Lessons </h3>
+              <h3>Verbs</h3>
+              <p>This is some body text. This is line 2.</p>
+              <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+              <p>This is line 5.</p>
+              <h3>Verbs2</h3>
+              <p>This is some body text.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 1</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-basic_quiz-q1two-0" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than a cat?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 2</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-basic_quiz-q1two-1" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than two cats?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+            </div>
+            <!--/right-->
+          </div>
+          <!--/row-->
+        </div>
+        <div class="tab-pane " id="next_quiz">
+          <div class="row">
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+              <ul class="nav nav-stacked sidebar">
+                <li>
+                  <a class="scroller" href="#q2one">
+                      Q2 - 1
+                    </a>
+                </li>
+                <li>
+                  <a class="scroller" href="#q2two">
+                      Q2 - 2
+                    </a>
+                </li>
+              </ul>
+            </div>
+            <!--/left-->
+            <!--right-->
+            <div class="col-md-9">
+              <h2 id="q2one">Q2 - 1</h2>
+              <p>two two two</p>
+              <hr/>
+              <h3> Lessons </h3>
+              <h3>Verbs</h3>
+              <p>This is some body text. This is line 2.</p>
+              <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+              <p>This is line 5.</p>
+              <h3>Verbs2</h3>
+              <p>This is some body text.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 1</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-next_quiz-q2one-0" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than a cat?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 2</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-next_quiz-q2one-1" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than two cats?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+              <h2 id="q2two">Q2 - 2</h2>
+              <p>two two two</p>
+              <hr/>
+              <h3> Lessons </h3>
+              <h3>Verbs</h3>
+              <p>This is some body text. This is line 2.</p>
+              <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+              <p>This is line 5.</p>
+              <h3>Verbs2</h3>
+              <p>This is some body text.</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 1</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-next_quiz-q2two-0" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than a cat?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3>Question 2</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="form-next_quiz-q2two-1" method="post" class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-lg-3 control-label">What is better than two cats?</label>
+                          <div class="col-lg-4">
+                            <input type="text" class="form-control" name="question" placeholder="Give your answer..." />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+            </div>
+            <!--/right-->
+          </div>
+          <!--/row-->
+        </div>
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>French Quiz</h1>
-
-<p>Basic French language material with customizable quiz.</p>
-
-<h2>Version</h2>
-
-<p>These scripts use Python 2.7. It is tested on these OS's:</p>
-
-<ul>
-<li>Windows 7</li>
-<li>Ubuntu 12.04</li>
-</ul><h4>Windows install</h4>
-
-<p>Python 2.7 is included in the standard Ubuntu 12.04 install. To get the needed software on windows, please download the <a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi" title="Python installer for Windows 7">Python 2.7 MSI</a>.</p>
-
-<p>It is advised to put the Python install on your <code>Path</code> so you can simplify inovking of python scripts.
-If not, try using the default Python path <code>C:\Python27\python.exe</code></p>
-
-<h2>Running</h2>
-
-<p>Go to the directory where you have the files and open a command line, type the following:</p>
-
-<pre><code>python quiz.py
-</code></pre>
-
-<p>This will run the main quiz which is set up to do a big test on all topics.
-If you want to do a specific test you can edit the part of the script under <code>if __name__ == "__main__":</code> or you can launch an interactive shell session.</p>
-
-<h4>Interactive shell session</h4>
-
-<p>Open a <code>cmd</code>. 
-Use <code>pushd</code> to get to the folder with all the scripts in. 
-Start a Python session with <code>python</code>.
-Use <code>dir(quiz)</code> to list all the functions avaiable.
-Pick one of the functions starting with 'quiz' e.g. <code>quizVerbs</code> and call it like <code>quiz.quizVerbs()</code>
-Add the named parameter <code>tests</code> to increase the number of questions.</p>
-
-<pre><code>C:\Users\npowell&gt; pushd C:\Users\npowell\Downloads\frenchquiz-master
-C:\Users\npowell\Downloads\frenchquiz-master&gt; python
-Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win
-32
-Type "help", "copyright", "credits" or "license" for more information.
-&gt;&gt;&gt; import quiz
-&gt;&gt;&gt; dir(quiz)
-['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'frenchVerbs'
-, 'frenchWords', 'makeFunctionItems', 'numberByNumber', 'numberByWord', 'quiz',
-'quiz1', 'quizBigNumbers', 'quizGroup1Verbs', 'quizGroup2Verbs', 'quizIrregularS
-entence', 'quizIrregularVerbs', 'quizLowNumbers', 'quizRandom', 'quizSentence',
-'quizTensNumbers', 'quizVerbs', 'randrange', 'sample', 'scoreQuiz', 'sentece', '
-sentenceEnglish', 'sentenceFrench', 'shuffle', 'verbAndRole', 'verbRoleEnglish',
- 'verbRoleFrench']
-&gt;&gt;&gt; quiz.quizVerbs(tests=25)
-</code></pre>
-
-<p>Use <code>Ctrl+c</code> to exit out, or just close the <code>cmd</code> application.</p>
-
-<hr><h1>Revision Notes</h1>
-
-<h2>Section 1</h2>
-
-<h3>The irregular verbs</h3>
-
-<p>These verbs have their own special conjugations, hence, irregular verbs.</p>
-
-<pre><code>avoir   = to have
-être    = to be
-allez   = to go
-</code></pre>
-
-<h3>The conjugations</h3>
-
-<p>There are no set rules to these, just learn them.</p>
-
-<h4>Avoir</h4>
-
-<pre><code>i       = j'ai        - ( je + ai )
-you     = tu as       - ( "two ahh" )
-he      = il a
-she     = elle a
-we      = nous avons
-you(p)  = vous avez
-they(m) = ils ont
-they(f) = elles ont
-</code></pre>
-
-<h4>Être</h4>
-
-<pre><code>i        = je suis
-you      = tu es 
-he       = il est
-she      = elle est
-we       = nous sommes 
-you(p)"  = vous etes
-they(m)" = ils sont
-they(f)" = elles sont
-</code></pre>
-
-<p>Some basic usage</p>
-
-<pre><code>Je vais ai metro          = I go to the metro
-Tu vas a la bibliotheque  = We go to the library
-Vous allez a l'épicicerie = You go to the grocery store
-Il va au supermarket      = He goes to the supermarket
-</code></pre>
-
-<h4>Allez</h4>
-
-<pre><code>i       = je vais
-you     = tu vais
-he      = il va
-she     = elle va
-we      = nous allons
-you(p)  = vous allez
-they(m) = ils vont
-they(f) = elles vont
-</code></pre>
-
-<h2>Section 2</h2>
-
-<h3>The numbers</h3>
-
-<p>The low numbers which are all used again for big numbers, e.g. 79 is read like 60-19</p>
-
-<pre><code>0  = zero
-1  = un
-2  = deux
-3  = trois
-4  = quatre
-5  = cinq
-6  = six
-7  = sept
-8  = huit
-9  = neuf
-10 = dix
-11 = onze
-12 = douze
-13 = treize
-14 = quatorze
-15 = quinze
-16 = seize
-17 = dix-sept
-18 = dix-huit
-19 = dix-neuf
-20 = vingt
-</code></pre>
-
-<h3>The big numbers</h3>
-
-<p>Note again the way of making 70 and 90.</p>
-
-<pre><code>10   = dix
-20   = vingt
-30   = trente
-40   = quarante
-50   = cinquante
-60   = soixante
-70   = soixante dix
-80   = quatre vingts
-90   = quatre vingts dix
-100  = cent
-1000 = mille
-</code></pre>
-
-<h2>Section 3</h2>
-
-<h4>Family members</h4>
-
-<p>Father and son are masculine, the rest are feminine.</p>
-
-<pre><code>the family = la familille
-mother     = la mere
-father     = le père
-son        = le fils       - ( "fiss" )
-daughter   = la fille      - ( "fee" )
-</code></pre>
-
-<h2>Section 4</h2>
-
-<h3>Group 1 verbs</h3>
-
-<p>These verbs ending in <code>er</code> all conjigate the same way.</p>
-
-<pre><code>i       =    Je ****e
-you     =    tu ****es
-he      =    il ****e
-she     =  elle ****e
-we      =  nous ****ons
-you(p)  =  vous ****ez
-they(m) =   ils ****est
-they(f) = elles ****est
-</code></pre>
-
-<p>The verbs</p>
-
-<pre><code>bring   = apporter
-carry   = transporter
-compose = composer
-create  = creer
-draw    = dessiner
-eat     = manager
-freeze  = geler
-give    = donner
-jump    = sauter
-like    = aimer
-pardon  = pardonner
-play    = jouer
-scratch = frotter
-scream  = crier
-share   = partager
-sing    = chanter
-speak   = parler
-study   = etudier
-work    = travailler
-</code></pre>
-
-<p>Some basic usage</p>
-
-<pre><code>J'ai manger les pains                             = I eat bread
-Nous étudions le Français                         = We study French
-J'aime regarder les Simpsons chaque Vendredi soir = I like to watch The Simpson every Friday night
-</code></pre>
-
-<h3>Making a  negative sentence</h3>
-
-<p>You can add two words around the verb to make a sentence negative: <code>ne pas</code></p>
-
-<pre><code>Je parle Français              = I speak French
-Je ne parle pas Français       = I do not speak French
-Je n'aime pas manger les pains = I do not eat bread
-</code></pre>
-
-<h2>Section 5</h2>
-
-<h3>Group 1 verbs</h3>
-
-<p>These verbs ending in <code>ir</code> all conjigate the same way.</p>
-
-<pre><code>i       =    Je *****is
-you     =    tu *****is
-he      =    il *****it
-she     =  elle *****it
-we      =  nous *****issons
-you(p)  =  vous *****issez
-they(m) =   ils *****issent
-they(f) = elles *****issent
-</code></pre>
-
-<p>The verbs</p>
-
-<pre><code>act       = agir
-age       = vielillir
-arise     = unite
-choose    = choisir
-coution   = avertir
-cure      = guerir
-daze      = etourdir
-decay     = pourrir
-destroy   = demolir
-disobey   = desobeir
-divide    = repatir
-establish = etablir
-feed      = nourrir
-fill      = remplir
-finish    = finir
-groan     = gemir
-hate      = hair
-obey      = obeir
-pail      = palir
-polish    = polir
-roast     = rotir
-shorten   = raccurcir
-slow down = ralentir
-soil      = salir
-undergo   = subir
-unite     = unir
-vomit     = vomir
-</code></pre>
-
-<h2>Section 6</h2>
-
-<h3>Questions</h3>
-
-<p>How to make a statement into a yes/no question, either add <code>Est-ce que</code> or switch the order of the role and the verb.</p>
-
-<pre><code>Tu aimis une table.           = You like the table. (statement)
-Aimis tu une table?           = You like the table? (question)
-Est-ce quetu aimis une table? = You like the table? (question)
-</code></pre>
-
-<p>How to make a question that needs a detailed answer by starting with <code>Qu'est-ce</code>.</p>
-
-<pre><code>Tu fais.                = You do.             (statement)
-Qu'est-ce que tu fais?  = What are you doing? (question)
-Tu aimes.               = You like.           (statement)
-Qu'est-ce que tu aimes? = What do you like?   (question)
-</code></pre>
-
-<p>Questioning words</p>
-
-<pre><code>quel   = what (masculine)
-quelle = what (feminine)
-qui    = who
-quand  = when
-qù     = where
-</code></pre>
-
-<p>Simple question </p>
-
-<pre><code>is it? = est-ce que c'est?
-is it? = est-ce?
-it is  = c'est
-</code></pre>
-
-<h2>Section 7</h2>
-
-<h3>Ownership</h3>
-
-<p>The variations for the word <code>je</code></p>
-
-<pre><code>my = mon (singular masculine)
-my = ma  (singular femiine)
-my = mes (plural)
-</code></pre>
-
-<p>The variations for the word <code>tu</code></p>
-
-<pre><code>your = ton (singular masculine)
-your = ta  (singular femiine)
-your = tes (plural)
-</code></pre>
-
-<p>The variations for the word <code>il/elle</code></p>
-
-<pre><code>their = son (singular masculine)
-their = sa  (singular femiine)
-their = ses (plural)
-</code></pre>
-
-<p>The variations for the word <code>the</code></p>
-
-<pre><code>the = le  (masculine)
-the = la  (femiine)
-the = les (plural)
-</code></pre>
-
-<p>The variations for the word <code>to</code> (going to)</p>
-
-<pre><code>to = a la (masculine)
-to = au   (femiine)
-to = aux  (plural)
-</code></pre>
-
-<p>And now, some examples</p>
-
-<pre><code>Mon t-shirt  = My t-shirt
-Ma casquette = My cap
-Mes souliers = My shoes
-</code></pre>
-
-<h2>Section 8</h2>
-
-<h3>Some general vocab</h3>
-
-<pre><code>table        = une table
-sofa         = un sofa
-library      = la bibliothèque
-corner store = le dépanneur
-cigarette    = une cigarette
-bathroom     = la salle de bain
-home         = maison
-metro        = au metro
-bread        = les pains
-hockey       = le hockey
-food         = la nourriture
-sentence     = phrase
-movie        = la film
-never        = jamais
-always       = toujours
-in           = dans
-on           = sur
-every        = chaque
-tonight      = ce soir    
-</code></pre>
-
-<h3>Places</h3>
-
-<pre><code>Montreal = au Montrèal
-</code></pre>
-
-<h3>Nationality</h3>
-
-<pre><code>North American(m) = American du North
-North American(f) = Americane du North
-African(m)        = Africain
-African(f)        = Africaine
-Indian(m)         = Indien
-Indian(f)         = Indienne
-</code></pre>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Frenchquiz maintained by <a href="https://github.com/nathanrosspowell">nathanrosspowell</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+    <!--/container-->
+    <!-- script references -->
+    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+    <!--script>
+            window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
+    </script-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+    $(document).ready(function()
+    {
+      $('#form-basic_quiz-q1one-0')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "dog";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-basic_quiz-q1one-1')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "two dogs";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-basic_quiz-q1two-0')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "dog";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-basic_quiz-q1two-1')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "two dogs";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-next_quiz-q2one-0')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "dog";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-next_quiz-q2one-1')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "two dogs";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-next_quiz-q2two-0')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "dog";
+                  }
+                }
+              }
+            }
+          }
+        });
+      $('#form-next_quiz-q2two-1')
+        .bootstrapValidator(
+        {
+          message: 'Not the right answer',
+          feedbackIcons:
+          {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+          },
+          submitHandler: function(validator, form, submitButton)
+          {
+            // Do nothing
+          },
+          fields:
+          {
+            question:
+            {
+              validators:
+              {
+                notEmpty:
+                {
+                  message: 'The first name is required'
+                },
+                callback:
+                {
+                  message: 'Wrong answer',
+                  callback: function(value, validator)
+                  {
+                    return value == "two dogs";
+                  }
+                }
+              }
+            }
+          }
+        });
+    });
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script-->
   </body>
 </html>
