@@ -10,7 +10,7 @@ var $body   = $(document.body);
 var navHeight = $('.navbar').outerHeight(true) + 10;
 
 $body.scrollspy({
-	target: '#leftCol',
+	target: '#scroll-tab-basic_quiz',
 	offset: navHeight
 });
 

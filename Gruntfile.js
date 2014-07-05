@@ -11,8 +11,6 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                    '<%= grunt.template.today("yyyy-mm-dd") %> */',
                 compress: {
                     drop_console: false
                 }
@@ -111,6 +109,9 @@ module.exports = function(grunt) {
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         prettify: {
+            options: {
+                indent: 4
+            },
             frenchQuiz: {
                 files: [{
                     expand: true,
@@ -164,9 +165,10 @@ module.exports = function(grunt) {
                         recurseObject(object[property]);
                     }else if (typeof object[property] == 'string'){
                         if (property === 'markdown' ){
-                            object[property] = markdown.markdown(object[property]
-                                , options
-                                ,'<%=content%>');
+                            object[property] = 
+                                markdown.markdown(object[property]
+                                    , options
+                                    ,'<%=content%>');
                         }
                     }
                 }
@@ -213,10 +215,27 @@ module.exports = function(grunt) {
     });
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Default task: does everything except deployment
-    grunt.registerTask('default', ['make-yaml', 'handlebars', 'uglify', 'copy']);
-    grunt.registerTask('make-yaml', ['yaml', 'concat', 'replace', 'file_append', 'tomd']);
-    grunt.registerTask('handlebars', ['compile-handlebars', 'prettify']);
+    grunt.registerTask('default', [
+          'make-yaml'
+        , 'handlebars'
+        , 'uglify'
+        , 'copy'
+    ]);
+    grunt.registerTask('make-yaml', [
+          'yaml'
+        , 'concat'
+        , 'replace'
+        , 'file_append'
+        , 'tomd'
+    ]);
+    grunt.registerTask('handlebars', [
+          'compile-handlebars'
+        , 'prettify'
+    ]);
     // deploy task: runs everything in order.
-    grunt.registerTask('deploy', ['default', 'gh-pages']);
+    grunt.registerTask('deploy', [
+          'default'
+        , 'gh-pages'
+    ]);
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
