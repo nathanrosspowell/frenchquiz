@@ -1,1 +1,1 @@
-/*! frenchquiz - v0.0.1 - 2014-07-05 */jQuery(document).ready(function(a){a("#tabs").tab()});
+jQuery(document).ready(function(a){a("#tabs").tab()});
