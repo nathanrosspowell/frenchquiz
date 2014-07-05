@@ -13,6 +13,8 @@
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
     <link rel="stylesheet" href="css/boilerplate.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
+    
   </head>
   <!-- Credit http://www.bootply.com/100983 -->
   <!-- Credit https://gist.github.com/mnewt/4228037 -->
@@ -84,8 +86,9 @@
                   <hr/>
                   <h3> Lessons </h3>
                   {{#each lesson}}
-                  <h3>{{ title }}</h3>
-                  {{{ body.markdown }}} {{/each}}
+                      <h3>{{ title }}</h3>
+                      {{{ body.markdown }}} 
+                  {{/each}}
                   <div class="row">
                     {{#each quiz}}
                       <div class="col-md-6">
@@ -94,8 +97,17 @@
                             <h3>{{ title }}</h3>
                           </div>
                           <div class="panel-body">
-                            <p>{{ question }}</p>
-                            <p>{{ answer }}</p>
+                                <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label">{{ question }}</label>
+                                        <div class="col-lg-4">
+                                            <input type="text" 
+                                                   class="form-control" 
+                                                   name="question" 
+                                                   placeholder="Give your answer..." />
+                                        </div>
+                                    </div>
+                                </form>
                           </div>
                         </div>
                       </div>
@@ -117,11 +129,51 @@
     <!--script>
             window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
     </script-->
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/handlebars-v1.3.0.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            {{#each_quiz}}
+                {{#each section}}
+                    {{#each quiz}}
+                        $('#form-{{ ../../id }}-{{ @key }}-{{ @index }}')
+                            .bootstrapValidator({
+                                message: 'Not the right answer',
+                                feedbackIcons: {
+                                    valid: 'glyphicon glyphicon-ok',
+                                    invalid: 'glyphicon glyphicon-remove',
+                                    validating: 'glyphicon glyphicon-refresh'
+                                },
+                                submitHandler: function(validator, form, submitButton) {
+                                    // Do nothing
+                                },
+                                fields: {
+                                    question: {
+                                        validators: {
+                                            notEmpty: {
+                                                message: 'The first name is required'
+                                            },
+                                            callback: {
+                                                message: 'Wrong answer',
+                                                callback: function(value, validator) {
+                                                    return value == "{{ answer }}";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        {{/each}}
+                    {{/each}}
+                {{/each_quiz}}
+            });
+        </script>
+    
+    
     {{#if project.googleanalytics }}
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--script>
