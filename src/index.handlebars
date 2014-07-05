@@ -83,7 +83,7 @@
       <div class="col-md-3" id="leftCol">
         <ul class="nav nav-stacked" id="sidebar">
             {{#each quiz}}
-                <li><a href="#{{ @key }}">{{ name }}</a></li>
+                <li><a href="#{{ @key }}">{{{ name }}}</a></li>
             {{/each}}
         </ul>
       </div><!--/left-->
@@ -92,16 +92,12 @@
       <div class="col-md-9">
         {{#each quiz}}
             <h2 id="{{ @key }}">{{ name }}</h2>
-            <p>
-                {{{ intro }}}
-            </p>
+            {{{ intro.markdown }}}
             <hr>
-            <h3> Lessons </h4>
+            <h3> Lessons </h3>
             {{#each lesson}}
-                <h3> {{ title }}</h4>
-                <p>
-                    {{{ body }}}
-                </p>
+            <h3>{{ title }}</h3>
+            {{{ body.markdown }}}
             {{/each}}  
             <div class="row">
                 {{#each quiz}}
@@ -109,12 +105,8 @@
                         <div class="panel panel-default">
                             <div class="panel-heading"><h3>{{ title }}</h3></div>
                             <div class="panel-body">
-                                <p>
-                                    {{{ question }}}
-                                </p>
-                                <p>
-                                    Make this a form: {{{ answer }}}
-                                </p>
+                                <p>{{ question }}</p>
+                                <p>{{ answer }}</p>
                             </div>
                         </div>
                     </div>

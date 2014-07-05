@@ -152,15 +152,21 @@ module.exports = function(grunt) {
     // Task to turn all text inside of the JSON into markdown output
     grunt.task.registerTask("tomd", "JSON->Markdown", function() {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // Function to change all JSON keys names 'markdown'.
         function recurseObject(object) {
+            console.log("OBJ:"+object);
             for (var property in object) {
+                console.log("PRO:"+property);
                 if (object.hasOwnProperty(property)) {
                     if (typeof object[property] == "object"){
                         recurseObject(object[property]);
                     }else if (typeof object[property] == 'string'){
-                        object[property] = markdown.markdown(object[property]
-                            , options
-                            ,'<%=content%>');
+                        if (property === 'markdown' ){
+                            console.log("    BINGO");
+                            object[property] = markdown.markdown(object[property]
+                                , options
+                                ,'<%=content%>');
+                        }
                     }
                 }
             }
@@ -205,7 +211,7 @@ module.exports = function(grunt) {
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Default task: does everything except deployment
     grunt.registerTask('default', ['make-yaml', 'handlebars', 'uglify', 'copy']);
-    grunt.registerTask('make-yaml', ['yaml', 'concat', 'replace', 'file_append']);
+    grunt.registerTask('make-yaml', ['yaml', 'concat', 'replace', 'file_append', 'tomd']);
     grunt.registerTask('handlebars', ['compile-handlebars', 'prettify']);
     // deploy task: runs everything in order.
     grunt.registerTask('deploy', ['default', 'gh-pages']);
