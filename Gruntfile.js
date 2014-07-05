@@ -102,7 +102,11 @@ module.exports = function(grunt) {
             frenchQuiz: {
                 template: 'src/**/*.handlebars',
                 templateData: builtJSON,
-                output: 'build/**/*index.html'
+                output: 'build/**/*index.html',
+                helpers: [ 
+                    'src/helpers/**/*.js', 
+                    'node_modules/handlebars-helper/lib/helpers/**/*.js' 
+                ]
             }
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,15 +158,12 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // Function to change all JSON keys names 'markdown'.
         function recurseObject(object) {
-            console.log("OBJ:"+object);
             for (var property in object) {
-                console.log("PRO:"+property);
                 if (object.hasOwnProperty(property)) {
                     if (typeof object[property] == "object"){
                         recurseObject(object[property]);
                     }else if (typeof object[property] == 'string'){
                         if (property === 'markdown' ){
-                            console.log("    BINGO");
                             object[property] = markdown.markdown(object[property]
                                 , options
                                 ,'<%=content%>');
@@ -172,6 +173,7 @@ module.exports = function(grunt) {
             }
         }
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // Options for grunt-markdown
         var options =  {
             preCompile: function(src, context) {},
             postCompile: function(src, context) {},
@@ -198,6 +200,7 @@ module.exports = function(grunt) {
             recurseObject(obj);
             content = JSON.stringify(obj, null, 2);
             //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            // Write the file out after modifying it.
             fs.writeFile(builtJSON, content, function(err) {
                 if(err) {
                     return console.log(err);

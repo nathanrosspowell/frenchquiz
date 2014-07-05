@@ -1,139 +1,130 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-    <head>
-        <meta name="description" content="">
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <title>{{project.title}}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!--[if lt IE 9]>
+  <head>
+    <meta name="description" content="">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>{{project.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-        
-        <link rel="stylesheet" href="css/boilerplate.css">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-      
-      
-
-      
-      
-      
-<nav class="navbar navbar-default navbar-fixed-top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">Bootply</a>
-    </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#sec">Get Started</a>
-        </li>
-        <li>
-          <a href="#sec">Edit</a>
-        </li>
-        <li>
-          <a href="#sec">Visualize</a>
-        </li>
-        <li>
-          <a href="#sec">Prototype</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</nav>
-
-<div id="masthead">  
-  <div class="container">
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylesheet" href="css/boilerplate.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <!-- Credit http://www.bootply.com/100983 -->
+  <!-- Credit https://gist.github.com/mnewt/4228037 -->
+  <body>
+    <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1>Bootstrap Sidebar
-            <p class="lead">With Affix and Scrollspy</p>
+          <h1>
+            {{ project.title }}
           </h1>
+          <p class="lead">
+            {{{ project.description.markdown }}}
+          </p>
         </div>
         <div class="col-md-5">
-            <div class="well well-lg"> 
-              <div class="row">
-                <div class="col-sm-6">
-        	      	<img src="http://placehold.it/180x100" class="img-responsive">
-                </div>
-                <div class="col-sm-6">
-	              	Some text here
-                </div>
+          <div class="well well-lg">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
+              </div>
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    View on <a href="{{ project.github }}">GitHub</a>
+                  </li>
+                  <li>
+                    Report an <a href="{{ project.github }}/issues">issue</a>
+                  </li>
+                  <li>
+                    Talk to <a href="http://twitter.com/{{ author.twitter }}/issues">@nathanross</a>
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
         </div>
-      </div> 
-  </div><!--/container-->
-</div><!--/masthead-->
-
-<!--main-->
-<div class="container">
-	<div class="row">
-      <!--left-->
-      <div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-            {{#each quiz}}
-                <li><a href="#{{ @key }}">{{{ name }}}</a></li>
-            {{/each}}
-        </ul>
-      </div><!--/left-->
-      
-      <!--right-->
-      <div class="col-md-9">
-        {{#each quiz}}
-            <h2 id="{{ @key }}">{{ name }}</h2>
-            {{{ intro.markdown }}}
-            <hr>
-            <h3> Lessons </h3>
-            {{#each lesson}}
-            <h3>{{ title }}</h3>
-            {{{ body.markdown }}}
-            {{/each}}  
+      </div>
+      <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        {{#each_quiz}}
+          <li {{#equal index 0 }} class="active" {{/equal}}>
+            <a href="#{{ @key }}" data-toggle="tab">
+                            {{ name }}
+            </a>
+          </li>
+        {{/each_quiz}}
+      </ul>
+      <div id="my-tab-content" class="tab-content">
+        {{#each_quiz}}
+          <div class="tab-pane active" id="{{ @key }}">
             <div class="row">
-                {{#each quiz}}
-                    <div class="col-md-6">
+              <!--left-->
+              <div class="col-md-3" id="leftCol">
+                <ul class="nav nav-stacked" id="sidebar">
+                  {{#each section}}
+                  <li>
+                    <a class="scroller" href="#{{ @key }}">
+                      {{{ name }}}
+                    </a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+              <!--/left-->
+              <!--right-->
+              <div class="col-md-9">
+                {{#each section}}
+                  <h2 id="{{ @key }}">{{ name }}</h2>
+                  {{{ intro.markdown }}}
+                  <hr/>
+                  <h3> Lessons </h3>
+                  {{#each lesson}}
+                  <h3>{{ title }}</h3>
+                  {{{ body.markdown }}} {{/each}}
+                  <div class="row">
+                    {{#each quiz}}
+                      <div class="col-md-6">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h3>{{ title }}</h3></div>
-                            <div class="panel-body">
-                                <p>{{ question }}</p>
-                                <p>{{ answer }}</p>
-                            </div>
+                          <div class="panel-heading">
+                            <h3>{{ title }}</h3>
+                          </div>
+                          <div class="panel-body">
+                            <p>{{ question }}</p>
+                            <p>{{ answer }}</p>
+                          </div>
                         </div>
-                    </div>
-                {{/each}}  
+                      </div>
+                    {{/each}}
+                  </div>
+                  <hr/>
+                {{/each}}
+              </div>
+              <!--/right-->
             </div>
-            <hr/>
-        {{/each}}            
-     
-        </div><!--/right-->
-  	</div><!--/row-->
-</div><!--/container-->
-
-
-
-        <!-- script references -->
-        <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
-        <!--script>
+            <!--/row-->
+          </div>
+        {{/each_quiz}}
+      </div>
+    </div>
+    <!--/container-->
+    <!-- script references -->
+    <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+    <!--script>
             window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
         </script-->
-        <script src="js/jquery-2.1.1.min.js"><\/script>
-        <script src="js/handlebars-v1.3.0.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/main.js"></script>
-        {{#if project.googleanalytics }}
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/handlebars-v1.3.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/main.js"></script>
+    {{#if project.googleanalytics }}
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -141,8 +132,6 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','{{project.googleanalytics }}');ga('send','pageview');
         </script-->
-        {{/if}}
-    </body>
+    {{/if}}
+  </body>
 </html>
-
-<!-- Credit http://www.bootply.com/100983 -->

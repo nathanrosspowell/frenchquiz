@@ -1,63 +1,71 @@
-Quiz1:
-    name: Number 1
-    intro:
-        balls: NO
-        markdown: |
-            Ding dong
-            - one
-            - two 
-            - two 
-            - two 
-            - two 
-            - three
-            ###DAMNNNN
-            
-                ##EHYYY
-             
-    lesson:
-        -   title: Verbs
-            body:
-                markdown: |
-                    This is some body text.
-                    This is line 2.
-                    Line 3 is a title
-                    -----------------
-                    
-                    This is line 5.
-        -   title: Verbs2
-            body:
-              markdown: |
-                    This is some body text.
-    quiz:
-        - title: Question 1
-          question: What is better than a cat?
-          answer: dog
-        - title: Question 2
-          question: What is better than two cats?
-          answer: two dogs
-Quiz2:
-    name: Number 2
-    intro:
-        markdown: |
-            Ding dong
-    lesson:
-        -   title: Verbs
-            body:
-                markdown: |
-                    Line 1.
-                    Line 2.
-        -   title: Verbs2
-            body:
-                markdown: |
-                    Long line...............................
-                    ----------------------------------------
-                    
-                    Line 2.
-    quiz:
-        - title: Question 1
-          question: What is better than a cat?
-          answer: dog
-        - title: Question 2
-          question: What is better than two cats?
-          answer: two dogs
-        
+section:
+    q1one:
+        name: Q2 - 1
+        intro:
+            markdown: |
+                Ding dong
+                - one
+                - two 
+                - two 
+                - two 
+                - two 
+                - three
+                ###DAMNNNN
+
+                    ##EHYYY
+        lesson:
+            -   title: Verbs
+                body:
+                    markdown: |
+                        This is some body text.
+                        This is line 2.
+                        Line 3 is a title
+                        -----------------
+                        
+                        This is line 5.
+            -   title: Verbs2
+                body:
+                  markdown: |
+                        This is some body text.
+        quiz:
+            - title: Question 1
+              question: What is better than a cat?
+              answer: dog
+            - title: Question 2
+              question: What is better than two cats?
+              answer: two dogs
+    q1two:
+        name: Q2 - 2
+        intro:
+            markdown: |
+                Ding dong
+                - one
+                - two 
+                - two 
+                - two 
+                - two 
+                - three
+                ###DAMNNNN
+
+                    ##EHYYY
+        lesson:
+            -   title: Verbs
+                body:
+                    markdown: |
+                        This is some body text.
+                        This is line 2.
+                        Line 3 is a title
+                        -----------------
+                        
+                        This is line 5.
+            -   title: Verbs2
+                body:
+                  markdown: |
+                        This is some body text.
+        quiz:
+            - title: Question 1
+              question: What is better than a cat?
+              answer: dog
+            - title: Question 2
+              question: What is better than two cats?
+              answer: two dogs

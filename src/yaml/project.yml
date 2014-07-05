@@ -1,3 +1,8 @@
-tilte: French Quiz
+title: French Quiz
 name: French Quiz
+description:
+    markdown: |
+        This is a website generated to test French skills.
+        Each quiz will help you better understand the language.
 googleanalytics: UA-XXXXX-X
+github: https://github.com/nathanrosspowell/frenchquiz
