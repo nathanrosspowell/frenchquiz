@@ -1,17 +1,11 @@
 jQuery(document).ready(function ($) {
     $('#tabs').tab();
+    $('.scroll-tab').scrollspy('refresh');
 });
     
-// $(function() {
-    // $('#tabs').bind('click', function (e) {
-        // console.log(e); 
-        // var newTarget = '#scroll-tab-' + e.toElement.hash.replace("#", "");
-        // e.target(window.alert(newTarget));
-        // var $body = $(document.body);
-        // var navHeight = $('.navbar').outerHeight(true) + 10;
-        // $body.scrollspy({
-            // target: newTarget,
-            // offset: navHeight
-        // });
-    // });
-// });
+$(function() {
+    $('#tabs li a').bind('click', function (e) {
+        $('.scroll-tab').scrollspy('refresh');
+        $('.scroll-tab').scrollspy('process');
+    });
+});

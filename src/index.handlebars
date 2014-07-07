@@ -6,13 +6,14 @@
         <meta charset="utf-8">
         <title>{{project.title}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
         <link rel="stylesheet" href="css/boilerplate.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/docs.css">
         <link rel="stylesheet" href="css/bootstrapValidator.min.css" />
     </head>
     <!-- Credit http://www.bootply.com/100983 -->
@@ -78,87 +79,85 @@
             </div>
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                 {{#each_quiz}}
-                <li {{#equal index 0 }} class="active" {{/equal}}>
-                    <a href="#{{ id }}" data-toggle="tab">
-                {{ name }}
-            </a>
-                </li>
+                    <li {{#equal index 0 }} class="active" {{/equal}}>
+                        <a href="#{{ id }}" data-toggle="tab">
+                            {{ name }}
+                        </a>
+                    </li>
                 {{/each_quiz}}
             </ul>
             <div id="my-tab-content" class="tab-content">
                 {{#each_quiz}}
-                <div class="tab-pane {{#equal index 0 }}active{{/equal}}" id="{{ id }}">
-                    <div class="row">
-                        <!--left-->
-                        <div class="col-md-3" id="scroll-tab-{{ id }}">
-                            <ul class="nav nav-stacked sidebar">
-                                {{#each section}}
-                                <li>
-                                    <a class="scroller" href="#{{ @key }}">
-                                        {{{ name }}}
-                                    </a>
-                                </li>
-                                <ul>
-                                    {{#each lesson}}
-                                        <li>
-                                            <a class="scroller" href="#{{ @key }}-lesson-{{ @index }}">
-                                                {{{ title }}}
-                                            </a>
-                                        </li>
-                                    {{/each}}
-                                    {{#each quiz}}
-                                        <li>
-                                            <a class="scroller" href="#{{ @key }}-quiz-{{ @index }}">
-                                                {{{ title }}}
-                                            </a>
-                                        </li>
+                    <div class="tab-pane {{#equal index 0 }}active{{/equal}}" id="{{ id }}">
+                        <!--/row-->
+                        <div class="row">
+                            <!--left-->
+                            <nav id="scroll-tab-{{ id }}" class="col-md-3 scroll-tab {{#equal index 0 }}scroll-tab-active{{/equal}}">
+                                <ul class="nav nav-stacked sidebar">
+                                    {{#each section}}
+                                    <li>
+                                        <a class="scroller" href="#{{ @key }}">
+                                            {{{ name }}}
+                                        </a>
+                                    </li>
+                                    <ul>
+                                        {{#each lesson}}
+                                            <li>
+                                                <a class="scroller" href="#{{ @key }}-lesson-{{ @index }}">
+                                                    {{{ title }}}
+                                                </a>
+                                            </li>
+                                        {{/each}}
+                                        {{#each quiz}}
+                                            <li>
+                                                <a class="scroller" href="#{{ @key }}-quiz-{{ @index }}">
+                                                    {{{ title }}}
+                                                </a>
+                                            </li>
+                                        {{/each}}
+                                    </ul>
                                     {{/each}}
                                 </ul>
-                                {{/each}}
-                            </ul>
-                        </div>
-                        <!--/left-->
-                        <!--right-->
-                        <div class="col-md-9">
-                            {{#each section}}
-
-                            {{#equal @index 0 }} {{else}}<hr/> {{/equal}}                            
-                            
-                            
-                            <h2 id="{{ @key }}">{{ name }}</h2>
-                            {{{ intro.markdown }}}
-                            <hr/>
-                            <h3> Lessons </h3>
-                            {{#each lesson}}
-                            <h3 id="{{ @key }}-lesson-{{ @index }}">{{ title }}</h3>
-                            {{{ body.markdown }}} {{/each}}
-                            <div class="row">
-                                {{#each quiz}}
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">{{ question }}</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                            </nav>
+                            <!--/left-->
+                            <!--right-->
+                            <div class="col-md-9 scrollspy-example" id="scroll-body-{{ id }}" data-spy="scroll" data-target="#scroll-tab-{{ id }}" >
+                                {{#each section}}
+                                    {{#equal @index 0 }} {{else}}<hr/> {{/equal}}                            
+                                    <h2 id="{{ @key }}">{{ name }}</h2>
+                                    {{{ intro.markdown }}}
+                                    <hr/>
+                                    <h3> Lessons </h3>
+                                    {{#each lesson}}
+                                    <h3 id="{{ @key }}-lesson-{{ @index }}">{{ title }}</h3>
+                                    {{{ body.markdown }}} {{/each}}
+                                    <div class="row">
+                                        {{#each quiz}}
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-lg-6 control-label">{{ question }}</label>
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                                                </div>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
+                                            </div>
+                                        {{/each}}
                                     </div>
-                                </div>
                                 {{/each}}
                             </div>
-                            {{/each}}
+                            <!--/right-->
                         </div>
-                        <!--/right-->
+                        <!--/row-->
                     </div>
-                    <!--/row-->
-                </div>
                 {{/each_quiz}}
             </div>
         </div>

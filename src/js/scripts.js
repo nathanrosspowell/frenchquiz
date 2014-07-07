@@ -9,10 +9,10 @@ $('.sidebar').affix({
 var $body   = $(document.body);
 var navHeight = $('.navbar').outerHeight(true) + 10;
 
-$body.scrollspy({
-	target: '#scroll-tab-basic_quiz',
-	offset: navHeight
-});
+// $body.scrollspy({
+	// target: '.scroll-tab-active',
+	// offset: navHeight
+// });
 
 /* smooth scrolling sections */
 $('.scroller').click(function() {
