@@ -12,7 +12,7 @@ $('#side-nav').affix({
 
 /* activate scrollspy menu */
 var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
+var navHeight = $('.navbar').outerHeight(true) + 80;
 
 $body.scrollspy({
 	target: '#side-nav',

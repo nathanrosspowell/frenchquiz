@@ -33,7 +33,8 @@ module.exports = function(grunt) {
                         '!**/*.handlebars', // ignore handlebar files,
                         '!**/js/main.js', // ignore this,
                         '!**/js/scripts.js', // ignore this,
-                        '!**/yaml/*', // and ignore this folder.
+                        '!**/yaml/*', // ignore this folder,
+                        '!**/helpers/*', // and ignore this folder.
                     ],
                     dest: 'build/',
                     filter: "isFile"
@@ -44,7 +45,7 @@ module.exports = function(grunt) {
         yaml: {
             frenchQuiz: {
                 options: {
-                    space: 2
+                    space: 4
                 },
                 files: [{
                     expand: true,
@@ -98,9 +99,9 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         'compile-handlebars': {
             frenchQuiz: {
-                template: 'src/**/*.handlebars',
+                template: ['src/index.handlebars', 'src/quiz.handlebars', 'src/quiz_2.handlebars'],
                 templateData: builtJSON,
-                output: 'build/**/*index.html',
+                output: ['build/index.html', 'build/basic_quiz/index.html', 'build/next_quiz/index.html'],
                 helpers: [ 
                     'src/helpers/**/*.js', 
                     'node_modules/handlebars-helper/lib/helpers/**/*.js' 

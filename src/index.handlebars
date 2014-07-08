@@ -13,190 +13,58 @@
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
         <link rel="stylesheet" href="css/boilerplate.css">
         <link rel="stylesheet" href="css/styles.css">
-        <!--link rel="stylesheet" href="css/docs.min.css"-->
-        <link rel="stylesheet" href="css/bootstrapValidator.min.css" />
+        <link rel="stylesheet" href="css/cover.css">
     </head>
     <!-- Credit http://www.bootply.com/100983 -->
     <!-- Credit https://gist.github.com/mnewt/4228037 -->
     <!-- Credit http://www.bootply.com/uvLVEgXZaK -->
     
     <body body data-spy="scroll" data-target="#side-nav">
-        <header class="masthead">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h1>
-                            {{ project.title }}
-                        </h1>
-                        <p class="lead">
-                            {{{ project.description.markdown }}}
-                        </p>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="well well-lg">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            View on <a href="{{ project.github }}">GitHub</a>
-                                        </li>
-                                        <li>
-                                            Report an <a href="{{ project.github }}/issues">issue</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/twbs">@twbs</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/jquery">@jquery</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://bootstrapvalidator.com">BootstrapValidator</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ author.twitter }}">
-                                                Tweet @{{ author.twitter }}
-                                            </a>
-                                            <script>
-                                            ! function(d, s, id)
-                                            {
-                                                var js, fjs = d.getElementsByTagName(s)[0],
-                                                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                                                if (!d.getElementById(id))
-                                                {
-                                                    js = d.createElement(s);
-                                                    js.id = id;
-                                                    js.src = p + '://platform.twitter.com/widgets.js';
-                                                    fjs.parentNode.insertBefore(js, fjs);
-                                                }
-                                            }(document, 'script', 'twitter-wjs');
-                                            </script>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>	  	  	
-            
-  	
-        <!-- Begin Navbar -->
-        <div id="nav">
-          <div class="navbar navbar-default navbar-static">
-            <div class="container">
-              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-              <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="glyphicon glyphicon-bar"></span>
-                <span class="glyphicon glyphicon-bar"></span>
-                <span class="glyphicon glyphicon-bar"></span>
-              </a>
-              <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+       <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">{{ project.title }}</h3>
+              <ul class="nav masthead-nav">
+                    <li class="active"><a href="#">Home</a></li>
                     {{#each_quiz}}
-                        <li {{#equal index 0 }} class="active" {{/equal}}>
-                            <a href="#{{ id }}" data-toggle="tab">
+                        <li>
+                            <a href="{{ id }}">
                                 {{ name }}
                             </a>
                         </li>
-                    {{/each_quiz}}
+                   {{/each_quiz}}
                 </ul>
-                <ul class="nav pull-right navbar-nav">
-                  <li>
-                    <form class="navbar-form">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                </form>
-                  </li>
-                  <li>
-                    <a href="#"><i class="glyphicon glyphicon-flag"></i> <span class="badge">2</span></a>
-                  </li>
-                </ul>
-              </div>		
+              </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">{{ project.title }}</h1>
+            <p class="lead">{{{ project.description.markdown }}}</p>
+            <p class="lead">
+                {{#each_quiz}}
+                    {{#equal index 0 }} 
+                        <a href="{{ id }}" class="btn btn-lg btn-default">Get started</a>
+                    {{/equal}}
+                {{/each_quiz}}
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
-          </div><!-- /.navbar -->
+          </div>
+
         </div>
 
-        <!-- Begin Body -->
-        <div class="container">
-            {{#each_quiz}}
-                <!--/row-->
-                <div class="row">
-                    <!--left-->
-                    <div class="col-md-3">
-                        <div id="side-nav">
-                        <ul class="nav nav-pills nav-stacked" >
-                            {{#each section}}
-                            <li>
-                                <a class="scroller" href="#{{ @key }}">
-                                    {{{ name }}}
-                                </a>
-                            </li>
-                            <ul>
-                                {{#each lesson}}
-                                    <li>
-                                        <a class="scroller" href="#{{ @key }}-lesson-{{ @index }}">
-                                            {{{ title }}}
-                                        </a>
-                                    </li>
-                                {{/each}}
-                                {{#each quiz}}
-                                    <li>
-                                        <a class="scroller" href="#{{ @key }}-quiz-{{ @index }}">
-                                            {{{ title }}}
-                                        </a>
-                                    </li>
-                                {{/each}}
-                            </ul>
-                            {{/each}}
-                        </ul>
-                        </div>
-                    </div>
-                    <!--/left-->
-                    <!--right-->
-                    <div class="col-md-9" id="scroll-body" data-spy="scroll" data-target="#side-nav" >
-                        {{#each section}}
-                            {{#equal @index 0 }} {{else}}<hr/> {{/equal}}                            
-                            <h2 id="{{ @key }}">{{ name }}</h2>
-                            {{{ intro.markdown }}}
-                            <hr/>
-                            <h3> Lessons </h3>
-                            {{#each lesson}}
-                            <h3 id="{{ @key }}-lesson-{{ @index }}">{{ title }}</h3>
-                            {{{ body.markdown }}} {{/each}}
-                            <div class="row">
-                                {{#each quiz}}
-                                    <div class="col-md-6">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h3 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h3>
-                                            </div>
-                                            <div class="panel-body">
-                                                <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
-                                                    <div class="form-group">
-                                                        <label class="col-lg-6 control-label">{{ question }}</label>
-                                                        <div class="col-lg-6">
-                                                            <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {{/each}}
-                            </div>
-                        {{/each}}
-                    </div>
-                    <!--/right-->
-                </div>
-                <!--/row-->
-            {{/each_quiz}}
-        </div>
-    
+      </div>
 
+    </div>
         <!--/container-->
         <!-- script references -->
         <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
@@ -208,44 +76,6 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-         <script>
-            $(document).ready(function() {
-                {{#each_quiz}}
-                    {{#each section}}
-                        {{#each quiz}}
-                            $('#form-{{ ../../id }}-{{ @key }}-{{ @index }}')
-                            .bootstrapValidator({
-                                message: 'Not the right answer',
-                                feedbackIcons: {
-                                    valid: 'glyphicon glyphicon-ok',
-                                    invalid: 'glyphicon glyphicon-remove',
-                                    validating: 'glyphicon glyphicon-refresh'
-                                },
-                                submitHandler: function(validator, form, submitButton) {
-                                    // Do nothing
-                                },
-                                fields: {
-                                    question: {
-                                        validators: {
-                                            notEmpty: {
-                                                message: 'The first name is required'
-                                            },
-                                            callback: {
-                                                message: 'Wrong answer',
-                                                callback: function(value, validator) {
-                                                    return value == "{{ answer }}";
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            });
-                        {{/each}}
-                    {{/each}}
-                {{/each_quiz}}
-            });
-        </script>
         {{#if project.googleanalytics }}
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--script>
