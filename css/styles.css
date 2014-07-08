@@ -15,11 +15,11 @@ header {
     z-index:10;
 }
 
-#sidebar.affix-top {
+#side-nav.affix-top {
     position: static;
 }
 
-#sidebar.affix {
+#side-nav.affix {
     position: fixed;
     top: 80px;
 }
