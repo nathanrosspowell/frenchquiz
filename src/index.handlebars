@@ -20,7 +20,7 @@
     <!-- Credit https://gist.github.com/mnewt/4228037 -->
     <!-- Credit http://www.bootply.com/uvLVEgXZaK -->
     
-    <body>
+    <body body data-spy="scroll" data-target="#side-nav">
         <header class="masthead">
             <div class="container">
                 <div class="row">
@@ -127,7 +127,8 @@
                 <div class="row">
                     <!--left-->
                     <div class="col-md-3">
-                        <ul class="nav nav-pills nav-stacked" id="sidebar">
+                        <div id="side-nav">
+                        <ul class="nav nav-pills nav-stacked" >
                             {{#each section}}
                             <li>
                                 <a class="scroller" href="#{{ @key }}">
@@ -152,10 +153,11 @@
                             </ul>
                             {{/each}}
                         </ul>
+                        </div>
                     </div>
                     <!--/left-->
                     <!--right-->
-                    <div class="col-md-9" id="scroll-body" data-spy="scroll" data-target="#sidebar" >
+                    <div class="col-md-9" id="scroll-body" data-spy="scroll" data-target="#side-nav" >
                         {{#each section}}
                             {{#equal @index 0 }} {{else}}<hr/> {{/equal}}                            
                             <h2 id="{{ @key }}">{{ name }}</h2>

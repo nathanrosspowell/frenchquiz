@@ -4,11 +4,20 @@ $('#nav').affix({
       }
 });	
 
-$('#sidebar').affix({
+$('#side-nav').affix({
       offset: {
         top: 200
       }
 });	
+
+/* activate scrollspy menu */
+var $body   = $(document.body);
+var navHeight = $('.navbar').outerHeight(true) + 10;
+
+$body.scrollspy({
+	target: '#side-nav',
+	offset: navHeight
+});
 
 /* smooth scrolling sections */
 $('.scroller').click(function() {
@@ -23,6 +32,3 @@ $('.scroller').click(function() {
       }
     }
 });
-
-
-$('body').scrollspy({ target: '#scroll-nav' })
