@@ -1,18 +1,14 @@
-/* activate sidebar */
-$('.sidebar').affix({
-  offset: {
-    top: 235
-  }
-});
+$('#nav').affix({
+      offset: {
+        top: $('header').height()
+      }
+});	
 
-/* activate scrollspy menu */
-var $body   = $(document.body);
-var navHeight = $('.navbar').outerHeight(true) + 10;
-
-// $body.scrollspy({
-	// target: '.scroll-tab-active',
-	// offset: navHeight
-// });
+$('#sidebar').affix({
+      offset: {
+        top: 200
+      }
+});	
 
 /* smooth scrolling sections */
 $('.scroller').click(function() {
@@ -27,3 +23,6 @@ $('.scroller').click(function() {
       }
     }
 });
+
+
+$('body').scrollspy({ target: '#scroll-nav' })
