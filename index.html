@@ -6,414 +6,279 @@
         <meta charset="utf-8">
         <title>French Quiz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
         <link rel="stylesheet" href="css/boilerplate.css">
         <link rel="stylesheet" href="css/styles.css">
+        <!--link rel="stylesheet" href="css/docs.min.css"-->
         <link rel="stylesheet" href="css/bootstrapValidator.min.css" />
     </head>
     <!-- Credit http://www.bootply.com/100983 -->
     <!-- Credit https://gist.github.com/mnewt/4228037 -->
+    <!-- Credit http://www.bootply.com/uvLVEgXZaK -->
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1>
-                        French Quiz
-                    </h1>
-                    <p class="lead">
-                        <p>This is a website generated to test French skills. Each quiz will help you better understand the language.</p>
-                    </p>
-                </div>
-                <div class="col-md-5">
-                    <div class="well well-lg">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
-                            </div>
-                            <div class="col-sm-6">
-                                <ul>
-                                    <li>
-                                        View on <a href="https://github.com/nathanrosspowell/frenchquiz">GitHub</a>
-                                    </li>
-                                    <li>
-                                        Report an <a href="https://github.com/nathanrosspowell/frenchquiz/issues">issue</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/twbs">@twbs</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/jquery">@jquery</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://bootstrapvalidator.com">BootstrapValidator</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="nathanross">
-                                            Tweet @nathanross
-                                        </a>
-                                        <script>
-                                        ! function(d, s, id)
-                                        {
-                                            var js, fjs = d.getElementsByTagName(s)[0],
-                                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                                            if (!d.getElementById(id))
+        <header class="masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1>
+                            French Quiz
+                        </h1>
+                        <p class="lead">
+                            <p>This is a website generated to test French skills. Each quiz will help you better understand the language.</p>
+                        </p>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="well well-lg">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>
+                                            View on <a href="https://github.com/nathanrosspowell/frenchquiz">GitHub</a>
+                                        </li>
+                                        <li>
+                                            Report an <a href="https://github.com/nathanrosspowell/frenchquiz/issues">issue</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/twbs">@twbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/jquery">@jquery</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://bootstrapvalidator.com">BootstrapValidator</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="nathanross">
+                                                Tweet @nathanross
+                                            </a>
+                                            <script>
+                                            ! function(d, s, id)
                                             {
-                                                js = d.createElement(s);
-                                                js.id = id;
-                                                js.src = p + '://platform.twitter.com/widgets.js';
-                                                fjs.parentNode.insertBefore(js, fjs);
-                                            }
-                                        }(document, 'script', 'twitter-wjs');
-                                        </script>
-                                    </li>
-                                </ul>
+                                                var js, fjs = d.getElementsByTagName(s)[0],
+                                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                                if (!d.getElementById(id))
+                                                {
+                                                    js = d.createElement(s);
+                                                    js.id = id;
+                                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                }
+                                            }(document, 'script', 'twitter-wjs');
+                                            </script>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-                <li class="active">
-                    <a href="#basic_quiz" data-toggle="tab">
-                Basic Quiz
-            </a>
-                </li>
-                <li>
-                    <a href="#next_quiz" data-toggle="tab">
-                Next Quiz
-            </a>
-                </li>
-            </ul>
-            <div id="my-tab-content" class="tab-content">
-                <div class="tab-pane active" id="basic_quiz">
-                    <div class="row">
-                        <!--left-->
-                        <div class="col-md-3" id="scroll-tab-basic_quiz">
-                            <ul class="nav nav-stacked sidebar">
-                                <li>
-                                    <a class="scroller" href="#q1one">
-                                        Q1 - 1
-                                    </a>
-                                </li>
-                                <ul>
-                                    <li>
-                                        <a class="scroller" href="#q1one-lesson-0">
-                                                Verbs
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1one-lesson-1">
-                                                Verbs2
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1one-quiz-0">
-                                                Question 1
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1one-quiz-1">
-                                                Question 2
-                                            </a>
-                                    </li>
-                                </ul>
-                                <li>
-                                    <a class="scroller" href="#q1two">
-                                        Q1 - 2
-                                    </a>
-                                </li>
-                                <ul>
-                                    <li>
-                                        <a class="scroller" href="#q1two-lesson-0">
-                                                Verbs
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1two-lesson-1">
-                                                Verbs2
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1two-quiz-0">
-                                                Question 1
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q1two-quiz-1">
-                                                Question 2
-                                            </a>
-                                    </li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <!--/left-->
-                        <!--right-->
-                        <div class="col-md-9">
-                            <h2 id="q1one">Q1 - 1</h2>
-                            <p>one one one one</p>
-                            <hr/>
-                            <h3> Lessons </h3>
-                            <h3 id="q1one-lesson-0">Verbs</h3>
-                            <p>This is some body text. This is line 2.</p>
-                            <h2 id="line-3-is-a-title">Line 3 is a title</h2>
-                            <p>This is line 5.</p>
-                            <h3 id="q1one-lesson-1">Verbs2</h3>
-                            <p>This is some body text.</p>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q1one-quiz-0">Question 1</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-basic_quiz-q1one-0" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than a cat?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q1one-quiz-1">Question 2</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-basic_quiz-q1one-1" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than two cats?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <h2 id="q1two">Q1 - 2</h2>
-                            <p>one one one one</p>
-                            <hr/>
-                            <h3> Lessons </h3>
-                            <h3 id="q1two-lesson-0">Verbs</h3>
-                            <p>This is some body text. This is line 2.</p>
-                            <h2 id="line-3-is-a-title">Line 3 is a title</h2>
-                            <p>This is line 5.</p>
-                            <h3 id="q1two-lesson-1">Verbs2</h3>
-                            <p>This is some body text.</p>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q1two-quiz-0">Question 1</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-basic_quiz-q1two-0" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than a cat?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q1two-quiz-1">Question 2</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-basic_quiz-q1two-1" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than two cats?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/right-->
+        </header>
+        <!-- Begin Navbar -->
+        <div id="nav">
+            <div class="navbar navbar-default navbar-static">
+                <div class="container">
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-bar"></span>
+                        <span class="glyphicon glyphicon-bar"></span>
+                        <span class="glyphicon glyphicon-bar"></span>
+                    </a>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="#basic_quiz" data-toggle="tab">
+                                Basic Quiz
+                            </a>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right navbar-nav">
+                            <li>
+                                <form class="navbar-form">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </form>
+                            </li>
+                            <li>
+                                <a href="#"><i class="glyphicon glyphicon-flag"></i> <span class="badge">2</span></a>
+                            </li>
+                        </ul>
                     </div>
-                    <!--/row-->
-                </div>
-                <div class="tab-pane " id="next_quiz">
-                    <div class="row">
-                        <!--left-->
-                        <div class="col-md-3" id="scroll-tab-next_quiz">
-                            <ul class="nav nav-stacked sidebar">
-                                <li>
-                                    <a class="scroller" href="#q2one">
-                                        Q2 - 1
-                                    </a>
-                                </li>
-                                <ul>
-                                    <li>
-                                        <a class="scroller" href="#q2one-lesson-0">
-                                                Verbs
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2one-lesson-1">
-                                                Verbs2
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2one-quiz-0">
-                                                Question 1
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2one-quiz-1">
-                                                Question 2
-                                            </a>
-                                    </li>
-                                </ul>
-                                <li>
-                                    <a class="scroller" href="#q2two">
-                                        Q2 - 2
-                                    </a>
-                                </li>
-                                <ul>
-                                    <li>
-                                        <a class="scroller" href="#q2two-lesson-0">
-                                                Verbs
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2two-lesson-1">
-                                                Verbs2
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2two-quiz-0">
-                                                Question 1
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a class="scroller" href="#q2two-quiz-1">
-                                                Question 2
-                                            </a>
-                                    </li>
-                                </ul>
-                            </ul>
-                        </div>
-                        <!--/left-->
-                        <!--right-->
-                        <div class="col-md-9">
-                            <h2 id="q2one">Q2 - 1</h2>
-                            <p>two two two</p>
-                            <hr/>
-                            <h3> Lessons </h3>
-                            <h3 id="q2one-lesson-0">Verbs</h3>
-                            <p>This is some body text. This is line 2.</p>
-                            <h2 id="line-3-is-a-title">Line 3 is a title</h2>
-                            <p>This is line 5.</p>
-                            <h3 id="q2one-lesson-1">Verbs2</h3>
-                            <p>This is some body text.</p>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q2one-quiz-0">Question 1</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-next_quiz-q2one-0" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than a cat?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q2one-quiz-1">Question 2</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-next_quiz-q2one-1" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than two cats?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr/>
-                            <h2 id="q2two">Q2 - 2</h2>
-                            <p>two two two</p>
-                            <hr/>
-                            <h3> Lessons </h3>
-                            <h3 id="q2two-lesson-0">Verbs</h3>
-                            <p>This is some body text. This is line 2.</p>
-                            <h2 id="line-3-is-a-title">Line 3 is a title</h2>
-                            <p>This is line 5.</p>
-                            <h3 id="q2two-lesson-1">Verbs2</h3>
-                            <p>This is some body text.</p>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q2two-quiz-0">Question 1</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-next_quiz-q2two-0" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than a cat?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 id="q2two-quiz-1">Question 2</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <form id="form-next_quiz-q2two-1" method="post" class="form-horizontal">
-                                                <div class="form-group">
-                                                    <label class="col-lg-6 control-label">What is better than two cats?</label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" name="question" placeholder="Your answer..." />
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/right-->
-                    </div>
-                    <!--/row-->
                 </div>
             </div>
+            <!-- /.navbar -->
+        </div>
+        <!-- Begin Body -->
+        <div class="container">
+            <!--/row-->
+            <div class="row">
+                <!--left-->
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked" id="sidebar">
+                        <li>
+                            <a class="scroller" href="#q1one">
+                                    Q1 - 1
+                                </a>
+                        </li>
+                        <ul>
+                            <li>
+                                <a class="scroller" href="#q1one-lesson-0">
+                                            Verbs
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1one-lesson-1">
+                                            Verbs2
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1one-quiz-0">
+                                            Question 1
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1one-quiz-1">
+                                            Question 2
+                                        </a>
+                            </li>
+                        </ul>
+                        <li>
+                            <a class="scroller" href="#q1two">
+                                    Q1 - 2
+                                </a>
+                        </li>
+                        <ul>
+                            <li>
+                                <a class="scroller" href="#q1two-lesson-0">
+                                            Verbs
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1two-lesson-1">
+                                            Verbs2
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1two-quiz-0">
+                                            Question 1
+                                        </a>
+                            </li>
+                            <li>
+                                <a class="scroller" href="#q1two-quiz-1">
+                                            Question 2
+                                        </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                <!--/left-->
+                <!--right-->
+                <div class="col-md-9" id="scroll-body" data-spy="scroll" data-target="#sidebar">
+                    <h2 id="q1one">Q1 - 1</h2>
+                    <p>one one one one</p>
+                    <hr/>
+                    <h3> Lessons </h3>
+                    <h3 id="q1one-lesson-0">Verbs</h3>
+                    <p>This is some body text. This is line 2.</p>
+                    <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+                    <p>This is line 5.</p>
+                    <h3 id="q1one-lesson-1">Verbs2</h3>
+                    <p>This is some body text.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="q1one-quiz-0">Question 1</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="form-basic_quiz-q1one-0" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-6 control-label">What is better than a cat?</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="q1one-quiz-1">Question 2</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="form-basic_quiz-q1one-1" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-6 control-label">What is better than two cats?</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <h2 id="q1two">Q1 - 2</h2>
+                    <p>one one one one</p>
+                    <hr/>
+                    <h3> Lessons </h3>
+                    <h3 id="q1two-lesson-0">Verbs</h3>
+                    <p>This is some body text. This is line 2.</p>
+                    <h2 id="line-3-is-a-title">Line 3 is a title</h2>
+                    <p>This is line 5.</p>
+                    <h3 id="q1two-lesson-1">Verbs2</h3>
+                    <p>This is some body text.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="q1two-quiz-0">Question 1</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="form-basic_quiz-q1two-0" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-6 control-label">What is better than a cat?</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="q1two-quiz-1">Question 2</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="form-basic_quiz-q1two-1" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-6 control-label">What is better than two cats?</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/right-->
+            </div>
+            <!--/row-->
         </div>
         <!--/container-->
         <!-- script references -->
@@ -539,150 +404,6 @@
                     }
                 });
             $('#form-basic_quiz-q1two-1')
-                .bootstrapValidator(
-                {
-                    message: 'Not the right answer',
-                    feedbackIcons:
-                    {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                    submitHandler: function(validator, form, submitButton)
-                    {
-                        // Do nothing
-                    },
-                    fields:
-                    {
-                        question:
-                        {
-                            validators:
-                            {
-                                notEmpty:
-                                {
-                                    message: 'The first name is required'
-                                },
-                                callback:
-                                {
-                                    message: 'Wrong answer',
-                                    callback: function(value, validator)
-                                    {
-                                        return value == "two dogs";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            $('#form-next_quiz-q2one-0')
-                .bootstrapValidator(
-                {
-                    message: 'Not the right answer',
-                    feedbackIcons:
-                    {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                    submitHandler: function(validator, form, submitButton)
-                    {
-                        // Do nothing
-                    },
-                    fields:
-                    {
-                        question:
-                        {
-                            validators:
-                            {
-                                notEmpty:
-                                {
-                                    message: 'The first name is required'
-                                },
-                                callback:
-                                {
-                                    message: 'Wrong answer',
-                                    callback: function(value, validator)
-                                    {
-                                        return value == "dog";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            $('#form-next_quiz-q2one-1')
-                .bootstrapValidator(
-                {
-                    message: 'Not the right answer',
-                    feedbackIcons:
-                    {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                    submitHandler: function(validator, form, submitButton)
-                    {
-                        // Do nothing
-                    },
-                    fields:
-                    {
-                        question:
-                        {
-                            validators:
-                            {
-                                notEmpty:
-                                {
-                                    message: 'The first name is required'
-                                },
-                                callback:
-                                {
-                                    message: 'Wrong answer',
-                                    callback: function(value, validator)
-                                    {
-                                        return value == "two dogs";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            $('#form-next_quiz-q2two-0')
-                .bootstrapValidator(
-                {
-                    message: 'Not the right answer',
-                    feedbackIcons:
-                    {
-                        valid: 'glyphicon glyphicon-ok',
-                        invalid: 'glyphicon glyphicon-remove',
-                        validating: 'glyphicon glyphicon-refresh'
-                    },
-                    submitHandler: function(validator, form, submitButton)
-                    {
-                        // Do nothing
-                    },
-                    fields:
-                    {
-                        question:
-                        {
-                            validators:
-                            {
-                                notEmpty:
-                                {
-                                    message: 'The first name is required'
-                                },
-                                callback:
-                                {
-                                    message: 'Wrong answer',
-                                    callback: function(value, validator)
-                                    {
-                                        return value == "dog";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            $('#form-next_quiz-q2two-1')
                 .bootstrapValidator(
                 {
                     message: 'Not the right answer',

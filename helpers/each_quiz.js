@@ -8,12 +8,12 @@ module.exports = function(options){
             name: "Basic Quiz",
             id: "basic_quiz",
             context: this.quiz
-        },
-        { 
-            name: "Next Quiz",
-            id: "next_quiz",
-            context: this.quiz2
         }
+        // { 
+            // name: "Next Quiz",
+            // id: "next_quiz",
+            // context: this.quiz2
+        // }
     ];
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Execute the options function on each object.
