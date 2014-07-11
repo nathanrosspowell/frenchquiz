@@ -278,7 +278,7 @@ Section 6
 
 How to make a statement into a yes/no question, either add `Est-ce que` or switch the order of the role and the verb.
 
-    Tu aimis une table.           = You like the table. (statement)
+    Tu aimes une table.           = You like the table. (statement)
     Aimis tu une table?           = You like the table? (question)
     Est-ce quetu aimis une table? = You like the table? (question)
     
