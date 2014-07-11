@@ -5,7 +5,8 @@ var path = require('path');
 var builtJSON = 'temp/built.json';
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module.exports = function(grunt) {
-    // Project configuration.
+    grunt.file.defaultEncoding = 'utf8';
+    // Project configuration.   
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,7 +47,8 @@ module.exports = function(grunt) {
         yaml: {
             frenchQuiz: {
                 options: {
-                    space: 4
+                    space: 4,
+                    readEncoding: 'latin1',
                 },
                 files: [{
                     expand: true,
