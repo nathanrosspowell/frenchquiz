@@ -34,11 +34,15 @@
                             {{{ project.description.markdown }}}
                         </p>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 extra-top-pad hidden-xs hidden-sm">
                         <div class="well well-lg">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" />
+                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" 
+                                         class="img-responsive" 
+                                         onmouseover="flagHover(this);" 
+                                         onmouseout="flagUnhover(this);" 
+                                         alt='Vive le Québec libre !'>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul>
@@ -90,12 +94,15 @@
         <div id="nav">
           <div class="navbar navbar-default navbar-static">
             <div class="container">
-              <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-              <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="glyphicon glyphicon-bar"></span>
-                <span class="glyphicon glyphicon-bar"></span>
-                <span class="glyphicon glyphicon-bar"></span>
-              </a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">{{ project.title }}</a>
+                </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     {{#each_quiz}}
@@ -106,7 +113,7 @@
                         </li>
                     {{/each_quiz}}
                 </ul>
-                <ul class="nav pull-right navbar-nav">
+                <ul class="nav pull-right navbar-nav hidden-xs hidden-sm">
                   <li>
                     <form class="navbar-form">
                         <input type="text" class="form-control" placeholder="Search...">
@@ -126,7 +133,7 @@
                     <!--/row-->
                     <div class="row">
                         <!--left-->
-                        <div class="col-md-3">
+                        <div class="col-md-3 hidden-xs hidden-sm">
                             <div id="side-nav" class="bs-docs-sidebar" role="complementary">
                             <ul class="nav bs-docs-sidenav" >
                                 {{#each section}}
@@ -213,6 +220,12 @@
         <script type="text/javascript" src="../js/scripts.js"></script>
         <script type="text/javascript" src="../js/main.js"></script>
          <script>
+            function flagHover(element) {
+                element.setAttribute('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Quebec.svg/320px-Flag_of_Quebec.svg.png');
+            }
+            function flagUnhover(element) {
+                element.setAttribute('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png');
+            }
             $(document).ready(function() {
                 {{#each_quiz}}
                     {{#equal ../quiz_id id }}

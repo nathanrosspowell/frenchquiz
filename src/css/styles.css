@@ -23,3 +23,7 @@ header {
     position: fixed;
     top: 80px;
 }
+
+.extra-top-pad{
+	padding-top: 18px
+}
