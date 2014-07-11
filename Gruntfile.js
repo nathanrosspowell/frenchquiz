@@ -34,6 +34,7 @@ module.exports = function(grunt) {
                         '!**/js/main.js', // ignore this,
                         '!**/js/scripts.js', // ignore this,
                         '!**/yaml/*', // ignore this folder,
+                        '!**/partials/*', // ignore this folder,
                         '!**/helpers/*', // and ignore this folder.
                     ],
                     dest: 'build/',
@@ -99,13 +100,22 @@ module.exports = function(grunt) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         'compile-handlebars': {
             frenchQuiz: {
-                template: ['src/index.handlebars', 'src/quiz.handlebars', 'src/quiz_2.handlebars'],
                 templateData: builtJSON,
-                output: ['build/index.html', 'build/basic_quiz/index.html', 'build/next_quiz/index.html'],
+                template: [
+                    'src/index.handlebars',
+                    'src/basic_quiz.handlebars',
+                    'src/next_quiz.handlebars'
+                ],
+                output: [
+                    'build/index.html',
+                    'build/basic_quiz/index.html',
+                    'build/next_quiz/index.html'
+                ],
                 helpers: [ 
                     'src/helpers/**/*.js', 
                     'node_modules/handlebars-helper/lib/helpers/**/*.js' 
-                ]
+                ],
+                partials: ['src/partials/**/*.handlebars']
             }
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
