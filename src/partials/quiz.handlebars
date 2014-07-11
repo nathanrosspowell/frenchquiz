@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/docs.min.css">
         <link rel="stylesheet" href="../css/bootstrapValidator.min.css" />
+        <link rel="stylesheet" href="../octicons/octicons.css">
     </head>
     <!-- Credit http://www.bootply.com/100983 -->
     <!-- Credit https://gist.github.com/mnewt/4228037 -->
@@ -145,14 +146,14 @@
                                         {{#each lesson}}
                                             <li>
                                                 <a class="scroller" href="#{{ @key }}-lesson-{{ @index }}">
-                                                    {{{ title }}}
+                                                    <span class="octicon octicon-mortar-board"></span> {{{ title }}}
                                                 </a>
                                             </li>
                                         {{/each}}
                                         {{#each quiz}}
                                             <li>
                                                 <a class="scroller" href="#{{ @key }}-quiz-{{ @index }}">
-                                                    {{{ title }}}
+                                                    <span class="octicon octicon-question"></span> {{{ title }}}
                                                 </a>
                                             </li>
                                         {{/each}}

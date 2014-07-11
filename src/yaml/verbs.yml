@@ -1,0 +1,84 @@
+section:
+    q1one:
+        name: The Special Verbs
+        intro:
+            markdown: |
+                French verbs can be split into a few different groups.
+                These verbs have their own special conjugations, hence, irregular verbs.
+                Learning each one will be a task of memorization! 
+
+        lesson:
+            -   title: Avoir - To Have
+                body:
+                    markdown: |
+                        If you wish to have something in French, learn these words.
+                        
+                            i       = j'ai        - ( je + ai )
+                            you     = tu as       - ( "two ahh" )
+                            he      = il a
+                            she     = elle a
+                            we      = nous avons
+                            you(p)  = vous avez
+                            they(m) = ils ont
+                            they(f) = elles ont
+                        
+            -   title: Être - To be / I am
+                body:
+                  markdown: |
+                        This doesn't translate directly because of the different meanings for each of the roles.
+                        
+                            i        = je suis
+                            you      = tu es 
+                            he       = il est
+                            she      = elle est
+                            we       = nous sommes 
+                            you(p)   = vous etes
+                            they(m)  = ils sont
+                            they(f)  = elles sont
+                            
+            -   title: Aller - To go
+                body:
+                  markdown: |
+                        How to get around.
+                        
+                            i       = je vais
+                            you     = tu vais
+                            he      = il va
+                            she     = elle va
+                            we      = nous allons
+                            you(p)  = vous allez
+                            they(m) = ils vont
+                            they(f) = elles vont   
+        quiz:
+            - title: Question 1
+              question: What is better than a cat?
+              answer: dog
+            - title: Question 2
+              question: What is better than two cats?
+              answer: two dogs
+    q1two:
+        name: Q1 - 2
+        intro:
+            markdown: |
+                one one one one
+        lesson:
+            -   title: Verbs
+                body:
+                    markdown: |
+                        This is some body text.
+                        This is line 2.
+                        Line 3 is a title
+                        -----------------
+                        
+                        This is line 5.
+            -   title: Verbs2
+                body:
+                  markdown: |
+                        This is some body text.
+        quiz:
+            - title: Question 1
+              question: What is better than a cat?
+              answer: dog
+            - title: Question 2
+              question: What is better than two cats?
+              answer: two dogs

@@ -5,9 +5,9 @@ module.exports = function(options){
     // List all of the quiz YAML files.
     var quizes = [
         { 
-            name: "Basic Quiz",
-            id: "basic_quiz",
-            context: this.quiz
+            name: "Verbs",
+            id: "verbs",
+            context: this.verbs
         },
         { 
             name: "Next Quiz",

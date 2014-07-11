@@ -94,7 +94,7 @@ module.exports = function(grunt) {
                         append: "\n}\n",
                         input: 'temp/concatfile.json'
                     }
-                },
+                }
             }
         },
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,12 +103,12 @@ module.exports = function(grunt) {
                 templateData: builtJSON,
                 template: [
                     'src/index.handlebars',
-                    'src/basic_quiz.handlebars',
+                    'src/verbs.handlebars',
                     'src/next_quiz.handlebars'
                 ],
                 output: [
                     'build/index.html',
-                    'build/basic_quiz/index.html',
+                    'build/verbs/index.html',
                     'build/next_quiz/index.html'
                 ],
                 helpers: [ 
