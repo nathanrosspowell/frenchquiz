@@ -208,42 +208,20 @@
         <script type="text/javascript" src="../js/handlebars-v1.3.0.js"></script>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
+        <!-- Credit http://semplicewebsites.com/removing-accents-javascript -->
+        <script type="text/javascript" src="../js/latinise.min.js"></script>
         <script type="text/javascript" src="../js/scripts.js"></script>
         <script type="text/javascript" src="../js/main.js"></script>
          <script>
             $(document).ready(function() {
                 {{#each_quiz}}
-                    {{#each section}}
-                        {{#each quiz}}
-                            $('#form-{{ ../../id }}-{{ @key }}-{{ @index }}')
-                            .bootstrapValidator({
-                                message: 'Not the right answer',
-                                feedbackIcons: {
-                                    valid: 'glyphicon glyphicon-ok',
-                                    invalid: 'glyphicon glyphicon-remove',
-                                    validating: 'glyphicon glyphicon-refresh'
-                                },
-                                submitHandler: function(validator, form, submitButton) {
-                                    // Do nothing
-                                },
-                                fields: {
-                                    question: {
-                                        validators: {
-                                            notEmpty: {
-                                                message: 'The first name is required'
-                                            },
-                                            callback: {
-                                                message: 'Wrong answer',
-                                                callback: function(value, validator) {
-                                                    return value == "{{ answer }}";
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            });
+                    {{#equal ../quiz_id id }}
+                        {{#each section}}
+                            {{#each quiz}}
+                                validateFormWithAnswer( '#form-{{ ../../id }}-{{ @key }}-{{ @index }}', "{{ answer }}" );
+                            {{/each}}
                         {{/each}}
-                    {{/each}}
+                    {{/equal}}
                 {{/each_quiz}}
             });
         </script>
