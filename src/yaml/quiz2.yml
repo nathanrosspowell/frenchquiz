@@ -1,53 +1,155 @@
 section:
-    q2one:
-        name: Q2 - 1
-        intro:
-            markdown: |
-                two two two 
+    irregular:
+        title: Irregular Verbs
+        markdown: |
+            French verbs can be split into a few different groups.
+            These verbs have their own special conjugations, hence, irregular verbs.
+            Learning each one will be a task of memorization!
+
         lesson:
-            -   title: Verbs
-                body:
-                    markdown: |
-                        This is some body text.
-                        This is line 2.
-                        Line 3 is a title
-                        -----------------
+            -   title: Avoir - To Have
+                markdown: |
+                    If you wish to have something in French, learn these words.
+                    
+                        i       = j'ai        - ( je + ai )
+                        you     = tu as       - ( "two ahh" )
+                        he      = il a
+                        she     = elle a
+                        we      = nous avons
+                        you(p)  = vous avez
+                        they(m) = ils ont
+                        they(f) = elles ont
                         
-                        This is line 5.
-            -   title: Verbs2
-                body:
-                  markdown: |
-                        This is some body text.
+            -   title: Être - To be / I am
+                markdown: |
+                    This doesn't translate directly because of the different meanings for each of the roles.
+                    
+                        i        = je suis
+                        you      = tu es 
+                        he       = il est
+                        she      = elle est
+                        we       = nous sommes 
+                        you(p)   = vous etes
+                        they(m)  = ils sont
+                        they(f)  = elles sont
+                        
+            -   title: Aller - To go
+                markdown: |
+                    How to get around.
+                    
+                        i       = je vais
+                        you     = tu vais
+                        he      = il va
+                        she     = elle va
+                        we      = nous allons
+                        you(p)  = vous allez
+                        they(m) = ils vont
+                        they(f) = elles vont   
         quiz:
-            - title: Question 1
-              question: What is better than a cat?
-              answer: dog
-            - title: Question 2
-              question: What is better than two cats?
-              answer: two dogs
-    q2two:
-        name: Q2 - 2
-        intro:
-            markdown: |
-                two two two 
+            -   title: Question 1
+                question: What is better than a cat?
+                answer: dog
+            -   title: Question 2
+                question: What is better than two cats?
+                answer: two dogs
+    group1:
+        title: Group One verbs
+        markdown: |
+            * All of the verbs end in `er`
+            * All of the verbs in this category follow the same rules for conjugation
+            * If you can remember the spelling, you will be able to correctly conjugate!
         lesson:
-            -   title: Verbs
-                body:
-                    markdown: |
-                        This is some body text.
-                        This is line 2.
-                        Line 3 is a title
-                        -----------------
+            -   title: Conjugation Example
+                markdown: |
+                    Here is the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
+                    
+                        i       =    Je ****e
+                        you     =    tu ****es
+                        he      =    il ****e
+                        she     =  elle ****e
+                        we      =  nous ****ons
+                        you(p)  =  vous ****ez
+                        they(m) =   ils ****est
+                        they(f) = elles ****est
                         
-                        This is line 5.
-            -   title: Verbs2
-                body:
-                  markdown: |
-                        This is some body text.
+                    So to say `We eat`, you remove the ending of `manger` so you have `mang` and drop it into the case for `nous ****ons` to get the result of `nous mangeons`.... wait, what?
+                    
+                    That is right; `mangeons`. Some times an extra `e` will appear in the conjugations. Just like the irregular verbs, it is something to 'just remember'.
+            -   title: A List of Verbs
+                markdown: |
+                    A big selection of group one verbs:
+                    
+                        bring   = apporter
+                        carry   = transporter
+                        compose = composer
+                        create  = creer
+                        draw    = dessiner
+                        eat     = manager
+                        freeze  = geler
+                        give    = donner
+                        jump    = sauter
+                        like    = aimer
+                        pardon  = pardonner
+                        play    = jouer
+                        scratch = frotter
+                        scream  = crier
+                        share   = partager
+                        sing    = chanter
+                        speak   = parler
+                        study   = etudier
+                        work    = travailler
+    group2:
+        title: Group Two verbs
+        markdown: |
+            * 
+            * All of the verbs end in `ir`
+            * All of the verbs in this category follow the same rules for conjugation
+            * If you can remember the spelling, you will be able to correctly conjugate!
+        lesson:
+            -   title: Conjugation Example
+                markdown: |
+                    Here is the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
+                    
+                        i       =    Je ****e
+                        you     =    tu ****es
+                        he      =    il ****e
+                        she     =  elle ****e
+                        we      =  nous ****ons
+                        you(p)  =  vous ****ez
+                        they(m) =   ils ****est
+                        they(f) = elles ****est
+                        
+                    So to say `We eat`, you remove the ending of `manger` so you have `mang` and drop it into the case for `nous ****ons` to get the result of `nous mangeons`.... wait, what?
+                    
+                    That is right; `mangeons`. Some times an extra `e` will appear in the conjugations. Just like the irregular verbs, it is something to 'just remember'.
+            -   title: A List of Verbs
+                markdown: |
+                    A big selection of group one verbs:
+                    
+                        bring   = apporter
+                        carry   = transporter
+                        compose = composer
+                        create  = creer
+                        draw    = dessiner
+                        eat     = manager
+                        freeze  = geler
+                        give    = donner
+                        jump    = sauter
+                        like    = aimer
+                        pardon  = pardonner
+                        play    = jouer
+                        scratch = frotter
+                        scream  = crier
+                        share   = partager
+                        sing    = chanter
+                        speak   = parler
+                        study   = etudier
+                        work    = travailler
+
         quiz:
-            - title: Question 1
-              question: What is better than a cat?
-              answer: dog
-            - title: Question 2
-              question: What is better than two cats?
-              answer: two dogs
+            -   title: Question 1
+                question: What is better than a cat?
+                answer: dog
+            -   title: Question 2
+                question: What is better than two cats?
+                answer: two dogs
