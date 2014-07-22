@@ -10,9 +10,9 @@ module.exports = function(options){
             context: this.verbs
         },
         { 
-            name: "Next Quiz",
-            id: "next_quiz",
-            context: this.quiz2
+            name: "Possession",
+            id: "possession",
+            context: this.possession
         }
     ];
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

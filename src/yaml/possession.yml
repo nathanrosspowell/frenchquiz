@@ -1,0 +1,79 @@
+section:
+    basics:
+        title: Possessive Basics
+        markdown: |
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Masculine</th>
+                        <th>Feminine</th>
+                        <th>Before vowel</th>
+                        <th>Plural</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>my</td>
+                        <td>mon</td>
+                        <td>ma</td>
+                        <td>mon</td>
+                        <td>mes</td>
+                    </tr>
+                    <tr>
+                        <td>your (tu form)</td>
+                        <td>ton</td>
+                        <td>ta</td>
+                        <td>ton</td>
+                        <td>tes</td>
+                    </tr>
+                    <tr>
+                        <td>his, her, its</td>
+                        <td>son</td>
+                        <td>sa</td>
+                        <td>son</td>
+                        <td>ses</td>
+                    </tr>
+                    <tr>
+                        <td>our</td>
+                        <td>notre</td>
+                        <td>notre</td>
+                        <td>notre</td>
+                        <td>nos</td>
+                    </tr>
+                    <tr>
+                        <td>your (vous form)</td>
+                        <td>votre</td>
+                        <td>votre</td>
+                        <td>votre</td>
+                        <td>vos</td>
+                    </tr>
+                    <tr>
+                        <td>their</td>
+                        <td>leur</td>
+                        <td>leur</td>
+                        <td>leur</td>
+                        <td>leurs</td>
+                    </tr>
+                </tbody>
+            </table>
+        lesson:
+            -   title: My
+                markdown: |
+                    todo....
+            -   title: Your
+                markdown: |
+                    todo....
+            -   title: His, Her, It
+                markdown: |
+                    todo....
+            -   title: Our
+                markdown: |
+                    todo....
+            -   title: Their
+                markdown: |
+                    todo....
+        quiz:
+            -   title: Question 1
+                question: What is better than a cat?
+                answer: dog

@@ -101,51 +101,54 @@ section:
     group2:
         title: Group Two verbs
         markdown: |
-            * 
             * All of the verbs end in `ir`
             * All of the verbs in this category follow the same rules for conjugation
             * If you can remember the spelling, you will be able to correctly conjugate!
         lesson:
             -   title: Conjugation Example
                 markdown: |
-                    Here is the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
+                    Here is the rules for all group two verbs. The stars can be replaced with any verb once you remove the `ir` from the end.
                     
-                        i       =    Je ****e
-                        you     =    tu ****es
-                        he      =    il ****e
-                        she     =  elle ****e
-                        we      =  nous ****ons
-                        you(p)  =  vous ****ez
-                        they(m) =   ils ****est
-                        they(f) = elles ****est
-                        
-                    So to say `We eat`, you remove the ending of `manger` so you have `mang` and drop it into the case for `nous ****ons` to get the result of `nous mangeons`.... wait, what?
-                    
-                    That is right; `mangeons`. Some times an extra `e` will appear in the conjugations. Just like the irregular verbs, it is something to 'just remember'.
+                        i       =    Je *****is
+                        you     =    tu *****is
+                        he      =    il *****it
+                        she     =  elle *****it
+                        we      =  nous *****issons
+                        you(p)  =  vous *****issez
+                        they(m) =   ils *****issent
+                        they(f) = elles *****issentst
+
             -   title: A List of Verbs
                 markdown: |
-                    A big selection of group one verbs:
+                    A big selection of group two verbs:
                     
-                        bring   = apporter
-                        carry   = transporter
-                        compose = composer
-                        create  = creer
-                        draw    = dessiner
-                        eat     = manager
-                        freeze  = geler
-                        give    = donner
-                        jump    = sauter
-                        like    = aimer
-                        pardon  = pardonner
-                        play    = jouer
-                        scratch = frotter
-                        scream  = crier
-                        share   = partager
-                        sing    = chanter
-                        speak   = parler
-                        study   = etudier
-                        work    = travailler
-
+                        act       = agir
+                        age       = vielillir
+                        arise     = unite
+                        choose    = choisir
+                        coution   = avertir
+                        cure      = guerir
+                        daze      = etourdir
+                        decay     = pourrir
+                        destroy   = demolir
+                        disobey   = desobeir
+                        divide    = repatir
+                        establish = etablir
+                        feed      = nourrir
+                        fill      = remplir
+                        finish    = finir
+                        groan     = gemir
+                        hate      = hair
+                        obey      = obeir
+                        pail      = palir
+                        polish    = polir
+                        roast     = rotir
+                        shorten   = raccurcir
+                        slow down = ralentir
+                        soil      = salir
+                        undergo   = subir
+                        unite     = unir
+                        vomit     = vomir
         quiz:
             -   title: Question 1
                 question: What is better than a cat?

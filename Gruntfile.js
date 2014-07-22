@@ -106,12 +106,12 @@ module.exports = function(grunt) {
                 template: [
                     'src/index.handlebars',
                     'src/verbs.handlebars',
-                    'src/next_quiz.handlebars'
+                    'src/possession.handlebars'
                 ],
                 output: [
                     'build/index.html',
                     'build/verbs/index.html',
-                    'build/next_quiz/index.html'
+                    'build/possession/index.html'
                 ],
                 helpers: [ 
                     'src/helpers/**/*.js', 
