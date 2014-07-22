@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <meta name="description" content="">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>French Quiz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="stylesheet" href="../css/boilerplate.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/docs.min.css">
+        <link rel="stylesheet" href="../css/bootstrapValidator.min.css" />
+        <link rel="stylesheet" href="../octicons/octicons.css">
+    </head>
+    <!-- Credit http://www.bootply.com/100983 -->
+    <!-- Credit https://gist.github.com/mnewt/4228037 -->
+    <!-- Credit http://www.bootply.com/uvLVEgXZaK -->
+    <!-- Credit http://getbootstrap.com/examples/cover/ -->
+    <body body data-spy="scroll" data-target="#side-nav">
+        <header class="masthead">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1>
+                            French Quiz
+                        </h1>
+                        <p class="lead">
+                            <p>This is a website generated to test French skills. Each quiz will help you better understand the language.</p>
+                        </p>
+                    </div>
+                    <div class="col-md-5 extra-top-pad hidden-xs hidden-sm">
+                        <div class="well well-lg">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png" class="img-responsive" onmouseover="flagHover(this);" onmouseout="flagUnhover(this);" alt='Vive le Qu�bec libre !'>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul>
+                                        <li>
+                                            View on <a href="https://github.com/nathanrosspowell/frenchquiz">GitHub</a>
+                                        </li>
+                                        <li>
+                                            Report an <a href="https://github.com/nathanrosspowell/frenchquiz/issues">issue</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/twbs">@twbs</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/jquery">@jquery</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://bootstrapvalidator.com">BootstrapValidator</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="nathanross">
+                                                Tweet @nathanross
+                                            </a>
+                                            <script>
+                                            ! function(d, s, id)
+                                            {
+                                                var js, fjs = d.getElementsByTagName(s)[0],
+                                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                                if (!d.getElementById(id))
+                                                {
+                                                    js = d.createElement(s);
+                                                    js.id = id;
+                                                    js.src = p + '://platform.twitter.com/widgets.js';
+                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                }
+                                            }(document, 'script', 'twitter-wjs');
+                                            </script>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Begin Navbar -->
+        <div id="nav">
+            <div class="navbar navbar-default navbar-static">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../">French Quiz</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="../verbs">
+                                Verbs
+                            </a>
+                            </li>
+                            <li class="active">
+                                <a href="../possession">
+                                Possession
+                            </a>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right navbar-nav hidden-xs hidden-sm">
+                            <li>
+                                <form class="navbar-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /.navbar -->
+        </div>
+        <!-- Begin Body -->
+        <div class="container">
+            <!--/row-->
+            <div class="row">
+                <!--left-->
+                <div class="col-md-3 hidden-xs hidden-sm">
+                    <div id="side-nav" class="bs-docs-sidebar" role="complementary">
+                        <ul class="nav bs-docs-sidenav">
+                            <li>
+                                <a class="scroller" href="#basics">
+                                        Possessive Basics
+                                    </a>
+                                <ul class="nav">
+                                    <li>
+                                        <a class="scroller" href="#basics-lesson-0">
+                                            <span class="octicon octicon-mortar-board"></span> My
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="scroller" href="#basics-lesson-1">
+                                            <span class="octicon octicon-mortar-board"></span> Your
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="scroller" href="#basics-lesson-2">
+                                            <span class="octicon octicon-mortar-board"></span> His, Her, It
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="scroller" href="#basics-lesson-3">
+                                            <span class="octicon octicon-mortar-board"></span> Our
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="scroller" href="#basics-lesson-4">
+                                            <span class="octicon octicon-mortar-board"></span> Their
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="scroller" href="#basics-quiz-0">
+                                            <span class="octicon octicon-question"></span> Question 1
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/left-->
+                <!--right-->
+                <div class="col-md-9" id="scroll-body" data-spy="scroll" data-target="#side-nav">
+                    <h2 id="basics">Possessive Basics</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>English</th>
+                                <th>Masculine</th>
+                                <th>Feminine</th>
+                                <th>Before vowel</th>
+                                <th>Plural</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>my</td>
+                                <td>mon</td>
+                                <td>ma</td>
+                                <td>mon</td>
+                                <td>mes</td>
+                            </tr>
+                            <tr>
+                                <td>your (tu form)</td>
+                                <td>ton</td>
+                                <td>ta</td>
+                                <td>ton</td>
+                                <td>tes</td>
+                            </tr>
+                            <tr>
+                                <td>his, her, its</td>
+                                <td>son</td>
+                                <td>sa</td>
+                                <td>son</td>
+                                <td>ses</td>
+                            </tr>
+                            <tr>
+                                <td>our</td>
+                                <td>notre</td>
+                                <td>notre</td>
+                                <td>notre</td>
+                                <td>nos</td>
+                            </tr>
+                            <tr>
+                                <td>your (vous form)</td>
+                                <td>votre</td>
+                                <td>votre</td>
+                                <td>votre</td>
+                                <td>vos</td>
+                            </tr>
+                            <tr>
+                                <td>their</td>
+                                <td>leur</td>
+                                <td>leur</td>
+                                <td>leur</td>
+                                <td>leurs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <h3> <span class="mega-octicon octicon-mortar-board"></span> Lessons </h3>
+                    <h3 id="basics-lesson-0">My</h3>
+                    <p>todo....</p>
+                    <h3 id="basics-lesson-1">Your</h3>
+                    <p>todo....</p>
+                    <h3 id="basics-lesson-2">His, Her, It</h3>
+                    <p>todo....</p>
+                    <h3 id="basics-lesson-3">Our</h3>
+                    <p>todo....</p>
+                    <h3 id="basics-lesson-4">Their</h3>
+                    <p>todo....</p>
+                    <hr/>
+                    <h3><span class="mega-octicon octicon-question"></span> Questions</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="basics-quiz-0">Question 1</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="form-possession-basics-0" method="post" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-6 control-label">What is better than a cat?</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/right-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-->
+        <!-- script references -->
+        <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+        <!--script>
+            window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')
+    </script-->
+        <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../js/handlebars-v1.3.0.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrapValidator.min.js"></script>
+        <!-- Credit http://semplicewebsites.com/removing-accents-javascript -->
+        <script type="text/javascript" src="../js/latinise.min.js"></script>
+        <script type="text/javascript" src="../js/scripts.js"></script>
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script>
+        function flagHover(element)
+        {
+            element.setAttribute('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Quebec.svg/320px-Flag_of_Quebec.svg.png');
+        }
+        function flagUnhover(element)
+        {
+            element.setAttribute('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/320px-Flag_of_France.svg.png');
+        }
+        $(document).ready(function()
+        {
+            validateFormWithAnswer('#form-possession-basics-0', "dog");
+        });
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!--script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script-->
+    </body>
+</html>
