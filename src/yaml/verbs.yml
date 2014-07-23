@@ -1,3 +1,6 @@
+header: 
+    markdown: |
+        This page is all about verbs <span class="octicon octicon-check"></span>
 section:
     irregular:
         title: Irregular Verbs

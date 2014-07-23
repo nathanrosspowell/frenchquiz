@@ -33,6 +33,18 @@
                         </h1>
                         <p class="lead">
                             {{{ project.description.markdown }}}
+                            {{#each_quiz}}
+                                {{#equal ../quiz_id id }}
+                                    {{#if header }}
+                                        <hr/>
+                                        {{#if header.markdown }}
+                                            {{{ header.markdown }}}
+                                        {{else}}
+                                            {{ header }}
+                                        {{/if}}
+                                    {{/if}}
+                                {{/equal}}
+                            {{/each_quiz}}
                         </p>
                     </div>
                     <div class="col-md-5 extra-top-pad hidden-xs hidden-sm">
@@ -189,7 +201,7 @@
                                                         <h4 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h4>
                                                     </div>
                                                     <div class="panel-body">
-                                                        <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
+                                                        <form id="form-{{ ../../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
                                                             <div class="form-group">
                                                                 <label class="col-lg-6 control-label">{{ question }}</label>
                                                                 <div class="col-lg-6">

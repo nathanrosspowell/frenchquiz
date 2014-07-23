@@ -4,6 +4,7 @@ function sanitise( text ) {
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function validateFormWithAnswer( formId, answer ) {
+    console.log( formId + " With " + answer );
     $(formId).bootstrapValidator({
         message: 'Not the right answer',
         feedbackIcons: {
@@ -18,10 +19,10 @@ function validateFormWithAnswer( formId, answer ) {
             question: {
                 validators: {
                     notEmpty: {
-                        message: 'The first name is required'
+                        message: 'Type in your answer...'
                     },
                     callback: {
-                        message: 'Wrong answer',
+                        message: 'Wrong answer :(',
                         callback: function(value, validator) {
                             return sanitise(value)== sanitise(answer);
                         }
