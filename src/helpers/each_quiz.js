@@ -13,6 +13,11 @@ module.exports = function(options){
             name: "Possession",
             id: "possession",
             context: this.possession
+        },
+        { 
+            name: "Miscellaneous",
+            id: "misc",
+            context: this.misc
         }
     ];
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

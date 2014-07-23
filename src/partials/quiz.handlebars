@@ -170,34 +170,39 @@
                                 {{#equal @index 0 }} {{else}}<hr/> {{/equal}}                            
                                 <h2 id="{{ @key }}">{{ title }}</h2>
                                 {{{ markdown }}}
-                                <hr/>
-                                <h3> <span class="mega-octicon octicon-mortar-board"></span> Lessons </h3>
-                                {{#each lesson}}
-                                <h3 id="{{ @key }}-lesson-{{ @index }}">{{ title }}</h3>
-                                {{{ markdown }}} {{/each}}
-                                <hr/>
-                                <h3><span class="mega-octicon octicon-question"></span> Questions</h3>
-                                <div class="row">
-                                    {{#each quiz}}
-                                        <div class="col-md-6">
-                                            <div class="panel panel-default">
-                                                <div class="panel-heading">
-                                                    <h3 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h3>
-                                                </div>
-                                                <div class="panel-body">
-                                                    <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
-                                                        <div class="form-group">
-                                                            <label class="col-lg-6 control-label">{{ question }}</label>
-                                                            <div class="col-lg-6">
-                                                                <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                {{#if lesson }}
+                                    <hr/>
+                                    <h3> <span class="mega-octicon octicon-mortar-board"></span> Lessons </h3>
+                                    {{#each lesson}}
+                                        <h3 id="{{ @key }}-lesson-{{ @index }}">{{ title }}</h3>
+                                        {{{ markdown }}} 
+                                    {{/each}}
+                                {{/if}}
+                                {{#if quiz }}
+                                    <hr/>
+                                    <h3><span class="mega-octicon octicon-question"></span> Questions</h3>
+                                    <div class="row">
+                                        {{#each quiz}}
+                                            <div class="col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 id="{{ @key }}-quiz-{{ @index }}">{{ title }}</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <form id="form-{{ ../../id }}-{{ @key }}-{{ @index }}" method="post" class="form-horizontal">
+                                                            <div class="form-group">
+                                                                <label class="col-lg-6 control-label">{{ question }}</label>
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" class="form-control" name="question" placeholder="Your answer..." />
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </form>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    {{/each}}
-                                </div>
+                                        {{/each}}
+                                    </div>
+                                {{/if}}
                             {{/each}}
                         </div>
                         <!--/right-->
