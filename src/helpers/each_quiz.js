@@ -18,6 +18,11 @@ module.exports = function(options){
             name: "Miscellaneous",
             id: "misc",
             context: this.misc
+        },
+        { 
+            name: "About Me",
+            id: "about_me",
+            context: this.about_me
         }
     ];
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

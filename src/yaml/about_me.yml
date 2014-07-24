@@ -1,0 +1,28 @@
+header: 
+    markdown: |
+        Here we will talk about who you are and what you do <span class="octicon octicon-person"></span>
+section:
+    who:
+        title: Who are you?
+        markdown: |
+            Learn to describe who you are.
+
+        lesson:
+            -   title: Your stats
+                markdown: |
+                    Name, age, height, hair colour, etc.
+                        
+            -   title: Your education and/or profession
+                markdown: |
+                    Where you went to school.
+                    What job you have.
+                    Where you go to work.
+                        
+            -   title: Hobbies
+                markdown: |
+                    Describe what you do on a weekend.
+                    
+        quiz:
+            -   title: Question 1
+                question: What is better than a cat?
+                answer: dog

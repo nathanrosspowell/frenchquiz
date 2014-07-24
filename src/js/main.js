@@ -19,10 +19,10 @@ function validateFormWithAnswer( formId, answer ) {
             question: {
                 validators: {
                     notEmpty: {
-                        message: 'Type in your answer...'
+                        message: '<span class="octicon octicon-keyboard"></span> Please type in your answer'
                     },
                     callback: {
-                        message: 'Wrong answer :(',
+                        message: 'Not quite right...',
                         callback: function(value, validator) {
                             return sanitise(value)== sanitise(answer);
                         }
