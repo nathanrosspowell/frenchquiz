@@ -1,4 +1,4 @@
-[yaml-boot-bars](http://nathanrosspowell.github.io/yaml-boot-bars)
+[French Quiz](http://nathanrosspowell.github.io/frenchquiz)
 ==============
 
 A Twitter Boostrap based single page website which uses Handlebars.js templating with YAML data storage.
