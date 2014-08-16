@@ -16,8 +16,8 @@ This project has a dependcy on [grunt](http://gruntjs.com) so the following will
 
 Move into a parent directory for the project and execute the following:
 
-    git clone https://github.com/nathanrosspowell/yaml-boot-bars
-    cd yaml-boot-bars
+    git clone https://github.com/nathanrosspowell/frenchquiz
+    cd frenchquiz
     npm install
     
   
@@ -35,7 +35,7 @@ Productivity
 The command to convert the source into the final website has been set up as the default grunt task.
 Inside of the project folder you can simply execute `grunt` then open the file `build/index.html`.
 
-Publishing to the web means moving everything from the `build/` folder into the [`gh-pages`](https://github.com/nathanrosspowell/yaml-boot-bars/tree/gh-pages) branch of the project.
+Publishing to the web means moving everything from the `build/` folder into the [`gh-pages`](https://github.com/nathanrosspowell/frenchquiz/tree/gh-pages) branch of the project.
 The package [`grunt-gh-pages`](https://github.com/tschaub/grunt-gh-pages) has been set up to do this task.
 Running `grunt gh-pages` will move these files across. The command `grunt deploy` does the whole workflow.
 
