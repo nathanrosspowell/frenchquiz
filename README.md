@@ -1,7 +1,14 @@
 French Quiz
 ==========
 
-Basic French language material with customizable quiz.
+Basic French language material with customizable quiz that has been written in Python.
+
+Website
+-------
+
+There is also a website supporting this small set of scripts which can be found at [nathanrosspowell.github.io/frenchquiz](http://nathanrosspowell.github.io/frenchquiz).
+
+It is developed on the [`gh-source`](https://github.com/nathanrosspowell/frenchquiz/tree/gh-source) branch and deployed to the [`gh-pages`](https://github.com/nathanrosspowell/frenchquiz/tree/gh-pages) branch.
 
 Version
 -------
