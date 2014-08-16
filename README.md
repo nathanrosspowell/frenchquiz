@@ -9,7 +9,7 @@ Installing
 
 ### Unix
 
-This project has a dependcy on [grunt](http://gruntjs.com) so the following will have to be done:
+This project has a dependcy on [node.js](http://nodejs.org) and [grunt](http://gruntjs.com) so the following will have to be done:
 
     apt-get install nodejs nodejs-legacy
     npm install -g grunt cli
