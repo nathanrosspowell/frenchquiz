@@ -21,13 +21,9 @@ header {
 
 #side-nav.affix {
     position: fixed;
-    top: 135px;
+    top: 80px;
 }
 
 .extra-top-pad{
     padding-top: 18px
-}
-
-body {
-    min-height: 900px;
 }
