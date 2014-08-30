@@ -1,8 +1,6 @@
 header: 
     markdown: |
-        Here is a bunch of interesting French language!
-        
-        <span class="mega-octicon octicon-beer"></span>
+        Here is a bunch of interesting French language! <span class="octicon octicon-beer"></span>
 section:
     one:
         title: Section one

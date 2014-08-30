@@ -1,11 +1,11 @@
 /* bootstrap 3 helpers */
 
 .navbar-form input, .form-inline input {
-	width:auto;
+    width:auto;
 }
 
 header {
-	height:280px;
+    height:280px;
 }
 
 #nav.affix {
@@ -21,9 +21,13 @@ header {
 
 #side-nav.affix {
     position: fixed;
-    top: 80px;
+    top: 135px;
 }
 
 .extra-top-pad{
-	padding-top: 18px
+    padding-top: 18px
+}
+
+body {
+    min-height: 900px;
 }
