@@ -50,11 +50,14 @@ section:
                         they(f) = elles vont   
         quiz:
             -   title: Question 1
-                question: What is better than a cat?
-                answer: dog
+                question: What is the word for 'go'?
+                answer: aller
             -   title: Question 2
-                question: What is better than two cats?
-                answer: two dogs
+                question: Translate 'I am'
+                answer: je suis
+            -   title: Question 3
+                question: What is 'nous avons' in English?
+                answer: we have 
     group1:
         title: Group One verbs
         markdown: |
