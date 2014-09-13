@@ -1,4 +1,4 @@
-header: 
+header:
     markdown: |
         This page is all about verbs <span class="octicon octicon-check"></span>
 section:
@@ -13,41 +13,41 @@ section:
             -   title: Avoir - To Have
                 markdown: |
                     If you wish to have something in French, learn these words.
-                    
-                        i       = j'ai        - ( je + ai )
-                        you     = tu as       - ( "two ahh" )
-                        he      = il a
-                        she     = elle a
-                        we      = nous avons
-                        you(p)  = vous avez
-                        they(m) = ils ont
-                        they(f) = elles ont
-                        
+
+                        J'ai       => I have      - Je + ai
+                        Tu as      => You have    - "two ahh" informal
+                        Il a       => He has
+                        Elle a     => She has
+                        Nous avons => We have
+                        Vous avez  => You have    - Informal
+                        Ils ont    => They have   - masculine plural
+                        Elles ont  => They have   - feminine plural
+
             -   title: Être - To be / I am
                 markdown: |
                     This doesn't translate directly because of the different meanings for each of the roles.
-                    
-                        i        = je suis
-                        you      = tu es 
-                        he       = il est
-                        she      = elle est
-                        we       = nous sommes 
-                        you(p)   = vous etes
-                        they(m)  = ils sont
-                        they(f)  = elles sont
-                        
+
+                        Je suis     => I am
+                        Tu es       => You are    - infromal
+                        Il est      => He is
+                        Elle est    => She is
+                        Nous sommes => We are
+                        Vous etes   => You are    - formal
+                        Ils sont    => They are   - masculine plural
+                        Elles sont  => they are   - feminie plural
+
             -   title: Aller - To go
                 markdown: |
                     How to get around.
-                    
-                        i       = je vais
-                        you     = tu vais
-                        he      = il va
-                        she     = elle va
-                        we      = nous allons
-                        you(p)  = vous allez
-                        they(m) = ils vont
-                        they(f) = elles vont   
+
+                        Je vais     => I go
+                        Tu vais     => You go     - informal
+                        Il va       => He goes
+                        Elle va     => She goes
+                        Nous allons => We go
+                        Vous allez  => You go     - formal
+                        Ils vont    => They go    - masculine plural
+                        Elles vont  => They go    - feminie plural
         quiz:
             -   title: Question 1
                 question: What is the word for 'go'?
@@ -57,7 +57,7 @@ section:
                 answer: je suis
             -   title: Question 3
                 question: What is 'nous avons' in English?
-                answer: we have 
+                answer: we have
     group1:
         title: Group One verbs
         markdown: |
@@ -68,42 +68,42 @@ section:
             -   title: Conjugation Example
                 markdown: |
                     Here is the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
-                    
-                        i       =    Je ****e
-                        you     =    tu ****es
-                        he      =    il ****e
-                        she     =  elle ****e
-                        we      =  nous ****ons
-                        you(p)  =  vous ****ez
-                        they(m) =   ils ****est
-                        they(f) = elles ****est
-                        
+
+                        Je    ****e   => I    ****
+                        Tu    ****es  => You  ****
+                        Il    ****e   => He   ****
+                        Elle  ****e   => She  ****
+                        Nous  ****ons => We   ****
+                        Vous  ****ez  => You  ****  - formal
+                        Ils   ****est => They ****  - masculine plural
+                        Elles ****est => They ****  - feminine plural
+
                     So to say `We eat`, you remove the ending of `manger` so you have `mang` and drop it into the case for `nous ****ons` to get the result of `nous mangeons`.... wait, what?
-                    
+
                     That is right; `mangeons`. Some times an extra `e` will appear in the conjugations. Just like the irregular verbs, it is something to 'just remember'.
             -   title: A List of Verbs
                 markdown: |
                     A big selection of group one verbs:
-                    
-                        bring   = apporter
-                        carry   = transporter
-                        compose = composer
-                        create  = creer
-                        draw    = dessiner
-                        eat     = manager
-                        freeze  = geler
-                        give    = donner
-                        jump    = sauter
-                        like    = aimer
-                        pardon  = pardonner
-                        play    = jouer
-                        scratch = frotter
-                        scream  = crier
-                        share   = partager
-                        sing    = chanter
-                        speak   = parler
-                        study   = etudier
-                        work    = travailler
+
+                        apporter    = bring
+                        transporter = carry
+                        composer    = compose
+                        creer       = create
+                        dessiner    = draw
+                        manager     = eat
+                        geler       = freeze
+                        donner      = give
+                        sauter      = jump
+                        aimer       = like
+                        pardonner   = pardon
+                        jouer       = play
+                        frotter     = scratch
+                        crier       = scream
+                        partager    = share
+                        chanter     = sing
+                        parler      = speak
+                        etudier     = study
+                        travailler  = work
     group2:
         title: Group Two verbs
         markdown: |
@@ -114,47 +114,47 @@ section:
             -   title: Conjugation Example
                 markdown: |
                     Here is the rules for all group two verbs. The stars can be replaced with any verb once you remove the `ir` from the end.
-                    
-                        i       =    Je *****is
-                        you     =    tu *****is
-                        he      =    il *****it
-                        she     =  elle *****it
-                        we      =  nous *****issons
-                        you(p)  =  vous *****issez
-                        they(m) =   ils *****issent
-                        they(f) = elles *****issent
+
+                        Je    ****is     => I    ****
+                        Tu    ****is     => You  ****  - informal
+                        Il    ****it     => He   ****
+                        Elle  ****it     => She  ****
+                        Nous  ****issons => We   ****
+                        Vous  ****issez  => You  ****  - formal
+                        Ils   ****issent => They ****  - masculine plural
+                        Elles ****issent => They **** - feminine plural
 
             -   title: A List of Verbs
                 markdown: |
                     A big selection of group two verbs:
-                    
-                        act       = agir
-                        age       = vielillir
-                        arise     = unite
-                        choose    = choisir
-                        coution   = avertir
-                        cure      = guerir
-                        daze      = etourdir
-                        decay     = pourrir
-                        destroy   = demolir
-                        disobey   = desobeir
-                        divide    = repatir
-                        establish = etablir
-                        feed      = nourrir
-                        fill      = remplir
-                        finish    = finir
-                        groan     = gemir
-                        hate      = hair
-                        obey      = obeir
-                        pail      = palir
-                        polish    = polir
-                        roast     = rotir
-                        shorten   = raccurcir
-                        slow down = ralentir
+
+                        agir = act
+                        vielillir = age
+                        unite     = arise
+                        choisir   = choose
+                        avertir   = coution
+                        guerir    = cure
+                        etourdir  = daze
+                        pourrir   = decay
+                        demolir   = destroy
+                        desobeir  = disobey
+                        repatir   = divide
+                        etablir   = establish
+                        nourrir   = feed
+                        remplir   = fill
+                        finir     = finish
+                        gemir     = groan
+                        hair      = hate
+                        obeir     = obey
+                        palir     = pail
+                        polir     = polish
+                        rotir     = roast
+                        raccurcir = shorten
+                        ralentir  = slow down
                         soil      = salir
-                        undergo   = subir
-                        unite     = unir
-                        vomit     = vomir
+                        subir     = undergo
+                        unir      = unite
+                        vomir     = vomit
         quiz:
             -   title: Question 1
                 question: What is better than a cat?
