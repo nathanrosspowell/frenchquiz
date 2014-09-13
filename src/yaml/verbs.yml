@@ -85,25 +85,25 @@ section:
                 markdown: |
                     A big selection of group one verbs:
 
-                        apporter    = bring
-                        transporter = carry
-                        composer    = compose
-                        creer       = create
-                        dessiner    = draw
-                        manager     = eat
-                        geler       = freeze
-                        donner      = give
-                        sauter      = jump
-                        aimer       = like
-                        pardonner   = pardon
-                        jouer       = play
-                        frotter     = scratch
-                        crier       = scream
-                        partager    = share
-                        chanter     = sing
-                        parler      = speak
-                        etudier     = study
-                        travailler  = work
+                        apporter    => bring
+                        transporter => carry
+                        composer    => compose
+                        creer       => create
+                        dessiner    => draw
+                        manager     => eat
+                        geler       => freeze
+                        donner      => give
+                        sauter      => jump
+                        aimer       => like
+                        pardonner   => pardon
+                        jouer       => play
+                        frotter     => scratch
+                        crier       => scream
+                        partager    => share
+                        chanter     => sing
+                        parler      => speak
+                        etudier     => study
+                        travailler  => work
     group2:
         title: Group Two verbs
         markdown: |
@@ -128,33 +128,33 @@ section:
                 markdown: |
                     A big selection of group two verbs:
 
-                        agir = act
-                        vielillir = age
-                        unite     = arise
-                        choisir   = choose
-                        avertir   = coution
-                        guerir    = cure
-                        etourdir  = daze
-                        pourrir   = decay
-                        demolir   = destroy
-                        desobeir  = disobey
-                        repatir   = divide
-                        etablir   = establish
-                        nourrir   = feed
-                        remplir   = fill
-                        finir     = finish
-                        gemir     = groan
-                        hair      = hate
-                        obeir     = obey
-                        palir     = pail
-                        polir     = polish
-                        rotir     = roast
-                        raccurcir = shorten
-                        ralentir  = slow down
-                        soil      = salir
-                        subir     = undergo
-                        unir      = unite
-                        vomir     = vomit
+                        agir      => act
+                        vielillir => age
+                        unite     => arise
+                        choisir   => choose
+                        avertir   => coution
+                        guerir    => cure
+                        etourdir  => daze
+                        pourrir   => decay
+                        demolir   => destroy
+                        desobeir  => disobey
+                        repatir   => divide
+                        etablir   => establish
+                        nourrir   => feed
+                        remplir   => fill
+                        finir     => finish
+                        gemir     => groan
+                        hair      => hate
+                        obeir     => obey
+                        palir     => pail
+                        polir     => polish
+                        rotir     => roast
+                        raccurcir => shorten
+                        ralentir  => slow down
+                        soil      => salir
+                        subir     => undergo
+                        unir      => unite
+                        vomir     => vomit
         quiz:
             -   title: Question 1
                 question: What is better than a cat?
