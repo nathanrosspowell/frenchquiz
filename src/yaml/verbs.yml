@@ -41,7 +41,7 @@ section:
                     How to get around.
 
                         Je vais     => I go
-                        Tu vais     => You go     - informal
+                        Tu vas      => You go     - informal
                         Il va       => He goes
                         Elle va     => She goes
                         Nous allons => We go
@@ -73,7 +73,7 @@ section:
         lesson:
             -   title: Conjugation Example
                 markdown: |
-                    Here is the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
+                    Here are the rules for all group one verbs. The stars can be replaced with any verb once you remove the `er` from the end.
 
                         Je    ****e   => I    ****
                         Tu    ****es  => You  ****
@@ -81,8 +81,8 @@ section:
                         Elle  ****e   => She  ****
                         Nous  ****ons => We   ****
                         Vous  ****ez  => You  ****  - formal
-                        Ils   ****est => They ****  - masculine plural
-                        Elles ****est => They ****  - feminine plural
+                        Ils   ****ent => They ****  - masculine plural
+                        Elles ****ent => They ****  - feminine plural
 
                     So to say `We eat`, you remove the ending of `manger` so you have `mang` and drop it into the case for `nous ****ons` to get the result of `nous mangeons`.... wait, what?
 
@@ -96,7 +96,7 @@ section:
                         composer    => compose
                         creer       => create
                         dessiner    => draw
-                        manager     => eat
+                        manger     => eat
                         geler       => freeze
                         donner      => give
                         sauter      => jump
@@ -144,7 +144,7 @@ section:
                         Nous  ****issons => We   ****
                         Vous  ****issez  => You  ****  - formal
                         Ils   ****issent => They ****  - masculine plural
-                        Elles ****issent => They **** - feminine plural
+                        Elles ****issent => They ****  - feminine plural
 
             -   title: A List of Verbs
                 markdown: |
@@ -158,7 +158,7 @@ section:
                         guerir    => cure
                         etourdir  => daze
                         pourrir   => decay
-                        demolir   => destroy
+                        demolir   => demolish
                         desobeir  => disobey
                         repatir   => divide
                         etablir   => establish
@@ -178,9 +178,9 @@ section:
                         unir      => unite
                         vomir     => vomit
         quiz:
-            -   title: They destroy
-                question: Translate "They destroy (masculine)"
+            -   title: They demolish
+                question: Translate "They demolish (masculine)"
                 answer: ils demolissent
             -   title: Je hair
-                question: What is "Je hair" in English?
+                question: What is "Je hais in English?
                 answer: i hate
