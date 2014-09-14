@@ -49,21 +49,21 @@ section:
                         Ils vont    => They go    - masculine plural
                         Elles vont  => They go    - feminie plural
         quiz:
-            -   title: Go 
+            -   title: Go
                 question: What is the word for "Go"?
                 answer: aller
             -   title: I am
                 question: Translate "I am"
                 answer: je suis
-            -   title: Nous avons 
+            -   title: Nous avons
                 question: What is "Nous avons" in English?
                 answer: we have
             -   title: Elle va
                 question: What is "Elle va" in English?
-                answer: she goes 
-            -   title: Vous etes 
-                question: Translate "Vous etes" 
-                answer: you are 
+                answer: she goes
+            -   title: Vous etes
+                question: Translate "Vous etes"
+                answer: you are
     group1:
         title: Group One verbs
         markdown: |
@@ -111,7 +111,7 @@ section:
                         etudier     => study
                         travailler  => work
         quiz:
-             -   title: I draw
+            -   title: I draw
                 question: Translate "I draw" to French
                 answer: Je dessine
             -   title: J'aime
@@ -124,7 +124,7 @@ section:
                 question: What does "Nous apportons" mean?
                 answer: we bring
             -   title: Vous travaillez
-                question: Translate "Vous travaillez" to English 
+                question: Translate "Vous travaillez" to English
                 answer: you work
     group2:
         title: Group Two verbs
@@ -178,9 +178,9 @@ section:
                         unir      => unite
                         vomir     => vomit
         quiz:
-            -   title: Question 1
-                question: What is better than a cat?
-                answer: dog
-            -   title: Question 2
-                question: What is better than two cats?
-                answer: two dogs
+            -   title: They destroy
+                question: Translate "They destroy (masculine)"
+                answer: ils demolissent
+            -   title: Je hair
+                question: What is "Je hair" in English?
+                answer: i hate
