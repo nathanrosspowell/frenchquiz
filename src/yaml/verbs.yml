@@ -49,15 +49,21 @@ section:
                         Ils vont    => They go    - masculine plural
                         Elles vont  => They go    - feminie plural
         quiz:
-            -   title: Question 1
-                question: What is the word for 'go'?
+            -   title: Go 
+                question: What is the word for "Go"?
                 answer: aller
-            -   title: Question 2
-                question: Translate 'I am'
+            -   title: I am
+                question: Translate "I am"
                 answer: je suis
-            -   title: Question 3
-                question: What is 'nous avons' in English?
+            -   title: Nous avons 
+                question: What is "Nous avons" in English?
                 answer: we have
+            -   title: Elle va
+                question: What is "Elle va" in English?
+                answer: she goes 
+            -   title: Vous etes 
+                question: Translate "Vous etes" 
+                answer: you are 
     group1:
         title: Group One verbs
         markdown: |
@@ -104,6 +110,22 @@ section:
                         parler      => speak
                         etudier     => study
                         travailler  => work
+        quiz:
+             -   title: I draw
+                question: Translate "I draw" to French
+                answer: Je dessine
+            -   title: J'aime
+                question: What does "J'aime" means?
+                answer: i like
+            -   title: She plays
+                question: Type 'She plays' in French
+                answer: elle joue
+            -   title: Nous apportons
+                question: What does "Nous apportons" mean?
+                answer: we bring
+            -   title: Vous travaillez
+                question: Translate "Vous travaillez" to English 
+                answer: you work
     group2:
         title: Group Two verbs
         markdown: |
