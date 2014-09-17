@@ -14,3 +14,22 @@ section:
             -   title: Question 1
                 question: What is better than a cat?
                 answer: dog
+    food:
+        title: Food Items
+        markdown: |
+            Remember the spelling and gender of food items.
+        lesson:
+            -   title: Fruits
+                markdown: |
+                    A list of fruits
+
+                        une pomme => an apple - feminine
+            -   title: Vegetables
+                markdown: |
+                    A list of veggies
+
+                        une carotte => a carrot - feminine
+        quiz:
+            -   title: Carrot
+                question: Translate 'a carrot' to French
+                answer: une carotte

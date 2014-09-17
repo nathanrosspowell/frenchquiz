@@ -108,14 +108,16 @@ module.exports = function(grunt) {
                     'src/verbs.handlebars',
                     'src/possession.handlebars',
                     'src/misc.handlebars',
-                    'src/about_me.handlebars'
+                    'src/about_me.handlebars',
+                    'src/basic_1.handlebars'
                 ],
                 output: [
                     'build/index.html',
                     'build/verbs/index.html',
                     'build/possession/index.html',
                     'build/misc/index.html',
-                    'build/about_me/index.html'
+                    'build/about_me/index.html',
+                    'build/basic_1/index.html'
                 ],
                 helpers: [ 
                     'src/helpers/**/*.js', 
