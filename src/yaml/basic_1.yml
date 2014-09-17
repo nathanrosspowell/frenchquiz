@@ -1,0 +1,16 @@
+header: 
+    markdown: |
+        This is the some of the content covered in YMCA Debute 1 <span class="octicon octicon-comment-discussion"></span>
+section:
+    tue-2014-9-9:
+        title: Tuesday 9th Sep.
+        markdown: |
+            In the first lession we the basic verbs Avoir and Etre.
+        lesson:
+            -   title: Avoir - To Have
+                markdown: |
+                   One two three...
+        quiz:
+            -   title: Question 1
+                question: What is better than a cat?
+                answer: dog
