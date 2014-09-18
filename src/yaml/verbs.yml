@@ -10,7 +10,7 @@ section:
             Learning each one will be a task of memorization!
 
         lesson:
-            -   title: Avoir - To Have
+            -   title: Avoir => To Have
                 markdown: |
                     If you wish to have something in French, learn these words.
 
@@ -23,7 +23,7 @@ section:
                         Ils ont    => They have   - masculine plural
                         Elles ont  => They have   - feminine plural
 
-            -   title: Être - To be / I am
+            -   title: Être => To be / I am
                 markdown: |
                     This doesn't translate directly because of the different meanings for each of the roles.
 
@@ -36,7 +36,7 @@ section:
                         Ils sont    => They are   - masculine plural
                         Elles sont  => they are   - feminie plural
 
-            -   title: Aller - To go
+            -   title: Aller => To go
                 markdown: |
                     How to get around.
 

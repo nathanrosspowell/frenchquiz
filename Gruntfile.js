@@ -6,7 +6,7 @@ var builtJSON = 'temp/built.json';
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 module.exports = function(grunt) {
     grunt.file.defaultEncoding = 'utf8';
-    // Project configuration.   
+    // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,9 +52,20 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'src/yaml/',
+                    cwd: 'temp/yaml/',
                     src: ['**/*.yml'],
                     dest: 'temp/json/'
+                }]
+            }
+        },
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        'special-html': {
+            frenchQuiz: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/yaml/',
+                    src: ['**/*.yml'],
+                    dest: 'temp/yaml/'
                 }]
             }
         },
@@ -119,9 +130,9 @@ module.exports = function(grunt) {
                     'build/about_me/index.html',
                     'build/basic_1/index.html'
                 ],
-                helpers: [ 
-                    'src/helpers/**/*.js', 
-                    'node_modules/handlebars-helper/lib/helpers/**/*.js' 
+                helpers: [
+                    'src/helpers/**/*.js',
+                    'node_modules/handlebars-helper/lib/helpers/**/*.js'
                 ],
                 partials: ['src/partials/**/*.handlebars']
             }
@@ -172,6 +183,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-prettify');
     grunt.loadNpmTasks('grunt-jsbeautifier');
+    grunt.loadNpmTasks('grunt-special-html');
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Task to turn all text inside of the JSON into markdown output
     grunt.task.registerTask("tomd", "JSON->Markdown", function() {
@@ -184,7 +196,7 @@ module.exports = function(grunt) {
                         recurseObject(object[property]);
                     }else if (typeof object[property] == 'string'){
                         if (property === 'markdown' ){
-                            object[property] = 
+                            object[property] =
                                 markdown.markdown(object[property]
                                     , options
                                     ,'<%=content%>');
@@ -228,9 +240,9 @@ module.exports = function(grunt) {
                 } else {
                     done(true);
                 }
-            }); 
+            });
         });
-        
+
     });
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // Default task: does everything except deployment
@@ -241,7 +253,8 @@ module.exports = function(grunt) {
         , 'copy'
     ]);
     grunt.registerTask('make-yaml', [
-          'yaml'
+         'special-html'
+        , 'yaml'
         , 'concat'
         , 'replace'
         , 'file_append'
