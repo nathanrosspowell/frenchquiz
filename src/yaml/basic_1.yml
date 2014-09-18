@@ -5,12 +5,46 @@ section:
     tue-2014-9-9:
         title: Tuesday 9th Sep.
         markdown: |
-            In the first lession we the basic verbs Avoir and Etre.
+            In the first lession we the basic verbs Avoir and Etre, this is already coverd on the `Verbs` page.
+            Simple questions and answers describing yourself were covered and added to the `About Me` page.
         lesson:
-            -   title: Avoir - To Have
+            -   title: Comprehension
                 markdown: |
-                   One two three...
+                   To have a more emersive experince in the classroom it is important to be able to ask questions about speaking and pronounciation in French
+
+                        Comment dit-on 'thanks'? => How do you say 'thanks'?
+                        Comment prononce-t'on 'apple' => How do you pronounce 'apple'?
+                        Comment j'ecris 'hello'? => How do I write 'hello'?
+                        Qu'est-ce que ca veut dire 'bonjour' => What does 'bonjour' mean?
+
+                   It is good to know how to reply to someone speaking French when you don't know how to reply
+
+                        Je ne comprende pas => I do not underdstand (comprehend)
+                        Répétez, s'il vous plaît => Please repeat
+                        Tu peux répéter s'il vous plaît => Can you repeat please
+
         quiz:
-            -   title: Question 1
-                question: What is better than a cat?
-                answer: dog
+            -   title: Understand 
+                question: How do you tell someone you don't understand?
+                answer: je ne comprende pas
+    tue-2014-9-11:
+        title: Thursday 11th Sep.
+        markdown: |
+        lesson:
+            -   title: Comprehension
+                markdown: |
+                   To have a more emersive experince in the classroom it is important to be able to ask questions about speaking and pronounciation in French
+
+                        Comment dit-on 'thanks'? => How do you say 'thanks'?
+                        Comment prononce-t'on 'apple' => How do you pronounce 'apple'?
+                        Comment j'ecris 'hello'? => How do I write 'hello'?
+
+                   It is good to know how to reply to someone speaking French when you don't know how to reply
+
+                        Je ne comprende pas => I do not underdstand (comprehend)
+                        Répétez, s'il vous plaît => Please repeat || Repeat, please
+
+        quiz:
+            -   title: Understand 
+                question: How do you tell someone you don't understand?
+                answer: je ne comprende pas
