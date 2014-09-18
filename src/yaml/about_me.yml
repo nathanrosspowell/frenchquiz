@@ -6,12 +6,28 @@ section:
         title: Who are you?
         markdown: |
             Learn to describe who you are.
-
         lesson:
             -   title: Your stats
                 markdown: |
                     Name, age, height, hair colour, etc.
-                        
+
+                        Comment vous applez-vous? => What is your name?  - formal
+                        Comment tu t'apples?      => What is your name?  - informal
+
+                        Je m'appelle Richard      => My name is Richard
+
+                    ---
+
+                        Quel âge avez-vous?  => How old are you?  - formal
+                        Quel âge es-tu?      => How old are you?  - informal
+
+                        Je'ai vingt-sept ans => I am twenty seven  - you 'have' age in French
+
+                    ---
+
+                        stuff
+
+                    
             -   title: Your education and/or profession
                 markdown: |
                     Where you went to school.
