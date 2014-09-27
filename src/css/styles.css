@@ -32,8 +32,3 @@ body {
     min-height: 900px;
 }
 
-@font-face { font-family: DejaVuMono; src: url('../fonts/DejaVuSansMono-webfont.otf'); } 
-
-code {
-    font-family: DejaVuMono;
-}
